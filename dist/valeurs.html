@@ -17,7 +17,7 @@
     <a href="activites.html">Nos activités</a>
     <a href="valeurs.html" aria-current="page">Nos valeurs</a>
     <a href="organisation.html">Notre organisation</a>
-    <a class="nav-contact" href="index.html#contact">Nous contacter</a>
+    <a class="nav-contact" href="#contact">Nous contacter</a>
   </nav>
   <button id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
 </header>
@@ -63,12 +63,6 @@
         </ul>
       </div>
     </section>
-    <section class="entry">
-      <h2>Faire grandir les savoir-faire.</h2>
-      <div class="entry-body">
-        <p>Les équipes réunissent des professionnels expérimentés et passionnés, avec des connaissances approfondies en arboriculture de la mangue. Leur expertise contribue à optimiser la production. Le domaine prévoit des programmes de formation pour son personnel et les agriculteurs locaux, afin de transmettre son savoir-faire et de promouvoir les bonnes pratiques agricoles dans la région.</p>
-      </div>
-    </section>
     <a class="link back" href="index.html">Revenir à l’accueil</a>
   </div>
   <aside class="page-aside">
@@ -79,13 +73,25 @@
     <h2>Une ambition durable.</h2>
     <p>Le domaine souhaite développer sa production tout en limitant son empreinte environnementale et en renforçant les compétences locales.</p>
     <a class="link" href="activites.html#projets">Découvrir les projets</a>
+    <section class="aside-entry">
+      <h2>Faire grandir les savoir-faire.</h2>
+      <p>Les équipes réunissent des professionnels expérimentés et passionnés, avec des connaissances approfondies en arboriculture de la mangue. Leur expertise contribue à optimiser la production. Le domaine prévoit des programmes de formation pour son personnel et les agriculteurs locaux, afin de transmettre son savoir-faire et de promouvoir les bonnes pratiques agricoles dans la région.</p>
+    </section>
   </aside>
+  <figure class="page-wide">
+    <div class="frame"><img src="assets/slide4.jpeg" alt="Envol d’oiseaux blancs au-dessus des cultures du domaine" width="1000" height="564" loading="lazy"></div>
+    <figcaption>Un envol d’oiseaux au-dessus des cultures.</figcaption>
+  </figure>
 </main>
-<footer class="site-footer wrap">
+<footer id="contact" class="site-footer">
+<div class="wrap">
   <div class="footer-top">
     <a class="brand" href="index.html"><img src="assets/logo-dan.jpeg" alt="DAN — Domaine Agricole de Néma" width="273" height="103"></a>
     <p>La terre. Et au-delà.</p>
   </div>
+</div>
+<div class="footer-band">
+<div class="wrap">
   <div class="footer-links">
     <a href="a-propos.html">À propos</a>
     <a href="activites.html">Nos activités</a>
@@ -99,6 +105,8 @@
     <span>1, rue Ramez Bourgi</span>
   </div>
   <p class="legal-line">SA au capital de 150 000 000 FCFA · NINEA : 005136909 · RCCM : SN DKR 14431</p>
+</div>
+</div>
 </footer>
 <script>const menu=document.querySelector('#menu'),nav=document.querySelector('#nav');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Fermer':'Menu'});</script>
 </body>

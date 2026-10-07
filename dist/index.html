@@ -17,7 +17,7 @@
     <a href="activites.html">Nos activités</a>
     <a href="valeurs.html">Nos valeurs</a>
     <a href="organisation.html">Notre organisation</a>
-    <a class="nav-contact" href="index.html#contact">Nous contacter</a>
+    <a class="nav-contact" href="#contact">Nous contacter</a>
   </nav>
   <button id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
 </header>
@@ -25,13 +25,24 @@
 
 <section class="hero wrap g13">
   <div class="hero-text">
-    <!--<p class="label">Domaine Agricole de Néma / Sénégal</p>-->
+    <p class="label">Domaine Agricole de Néma / Sénégal</p>
     <h1>La terre.<br><em>Et au-delà.</em></h1>
     <p class="lede">Depuis 1996, cultiver, transformer et exporter au cœur du Sénégal.</p>
     <a class="cta" href="#produits">Nos produits</a>
   </div>
-  <figure class="hero-main frame"><img src="assets/parcelle.webp" alt="Parcelle cultivée du Domaine Agricole de Néma" width="564" height="1000" fetchpriority="high"></figure>
-  <figure class="hero-inset frame"><img src="assets/mangues-sur-arbre.webp" alt="" width="564" height="1000"></figure>
+  <!-- Diaporama : les deux cadres changent par paires, en fondu (voir le script en bas de page). -->
+  <figure class="hero-main frame slideshow">
+    <img class="is-on" src="assets/parcelle.webp" alt="Parcelle cultivée du Domaine Agricole de Néma" width="564" height="1000" fetchpriority="high">
+    <img data-src="assets/slide1.jpeg" alt="Jeunes plants sous abri au domaine" width="564" height="1000" style="object-position:center 30%">
+    <img data-src="assets/slide6.jpeg" alt="Mise en sacs du maïs après la récolte" width="564" height="1000" style="object-position:center 35%">
+    <img data-src="assets/slide8.jpeg" alt="Filets d’oignons chargés pour l’expédition" width="960" height="1280" style="object-position:center 40%">
+  </figure>
+  <figure class="hero-inset frame slideshow">
+    <img class="is-on" src="assets/mangues-sur-arbre.webp" alt="" width="564" height="1000">
+    <img data-src="assets/slide5.jpeg" alt="" width="1000" height="564">
+    <img data-src="assets/slide7.jpeg" alt="" width="1000" height="564">
+    <img data-src="assets/slide2.jpeg" alt="" width="1000" height="564">
+  </figure>
   <div class="hero-foot">
     <a href="#maison">Découvrir Néma</a>
     <span>Vente · Transformation · Exportation</span>
@@ -39,7 +50,7 @@
 </section>
 
 <section id="maison" class="section maison wrap g13">
-  <figure class="maison-photo frame reveal"><img src="assets/jeunes-plants.webp" alt="Jeunes plants sous abri au domaine" width="564" height="1000" loading="lazy"></figure>
+  <figure class="maison-photo frame reveal"><img src="assets/mangues.webp" alt="Mangues Kent récoltées, rangées en cartons" width="720" height="1280" loading="lazy"></figure>
   <div class="maison-text reveal">
     <p class="label">Notre maison</p>
     <h2>Une récolte.<br><em>Mille possibles.</em></h2>
@@ -56,6 +67,7 @@
       <a class="link" href="valeurs.html#certifications">Nos engagements qualité</a>
     </div>
   </div>
+  <figure class="maison-side frame reveal"><img src="assets/mais_culture.jpeg" alt="Épis de maïs récoltés, étalés pour le séchage" width="564" height="1000" loading="lazy"></figure>
 </section>
 
 <section id="metiers" class="section section-tight metiers wrap">
@@ -103,12 +115,12 @@
       <p class="label">Notre sélection</p>
       <h2>Nos terres.<br><em>Leurs richesses.</em></h2>
     </div>
-  </div>
-  <div class="filters" role="group" aria-label="Filtrer les produits">
-    <button class="filter" data-filter="all" aria-pressed="true">Toute la sélection</button>
-    <button class="filter" data-filter="fruit" aria-pressed="false">Mangue</button>
-    <button class="filter" data-filter="seed" aria-pressed="false">Cultures &amp; maraîchage</button>
-    <button class="filter" data-filter="plant" aria-pressed="false">Élevage &amp; pisciculture</button>
+    <div class="filters" role="group" aria-label="Filtrer les produits">
+      <button class="filter" data-filter="all" aria-pressed="true">Toute la sélection</button>
+      <button class="filter" data-filter="fruit" aria-pressed="false">Mangue</button>
+      <button class="filter" data-filter="seed" aria-pressed="false">Cultures &amp; maraîchage</button>
+      <button class="filter" data-filter="plant" aria-pressed="false">Élevage &amp; pisciculture</button>
+    </div>
   </div>
   <div class="catalog g13">
     <article class="product p-fruit reveal" data-category="fruit">
@@ -140,7 +152,10 @@
 
 <section class="terre wrap g13" aria-label="Notre lien à la terre">
   <figure class="frame reveal"><img src="assets/cultures.webp" alt="Rangées de cultures au Domaine Agricole de Néma" width="1000" height="564" loading="lazy"></figure>
-  <blockquote class="reveal">Les lignes changent.<br><em>La terre reste.</em></blockquote>
+  <div class="terre-side reveal">
+    <figure class="frame terre-inset"><img src="assets/plantation.webp" alt="Travail de plantation au domaine" width="564" height="1000" loading="lazy"></figure>
+    <blockquote>Les lignes changent.<br><em>La terre reste.</em></blockquote>
+  </div>
 </section>
 
 <section id="export" class="section export wrap g13">
@@ -168,31 +183,23 @@
       <a class="team-row" href="organisation.html#qualite"><h3>Qualité &amp; gestion</h3><small>RQHSE · Administration · Finances</small></a>
     </div>
     <a class="link" href="organisation.html">Toute notre organisation</a>
+    <figure class="team-note">
+      <div class="frame"><img src="assets/charge_camion.jpeg" alt="Équipe du domaine chargeant des cagettes de récolte dans un camion" width="1000" height="564" loading="lazy"></div>
+    </figure>
   </div>
   <figure class="team-photo frame reveal"><img src="assets/conditionnement.webp" alt="Équipe préparant les mangues au conditionnement" width="564" height="1000" loading="lazy"></figure>
 </section>
 
-<section id="contact" class="contact">
-  <div class="wrap g13">
-    <div class="contact-heading">
-      <p class="label">Contact</p>
-      <h2>Votre projet.<br><em>Parlons-en.</em></h2>
-    </div>
-    <div class="contact-coordinates">
-      <a class="contact-number" href="tel:+221338898712">+221 33 889 87 12</a>
-      <a class="contact-email" href="mailto:contact@dan.com">contact@dan.com</a>
-      <p class="contact-address">1, rue Ramez Bourgi</p>
-    </div>
-  </div>
-  <!-- Le formulaire de contact désactivé est conservé dans dist-avant-refonte/index.html. -->
-</section>
-
 </main>
-<footer class="site-footer wrap">
+<footer id="contact" class="site-footer">
+<div class="wrap">
   <div class="footer-top">
     <a class="brand" href="index.html"><img src="assets/logo-dan.jpeg" alt="DAN — Domaine Agricole de Néma" width="273" height="103"></a>
     <p>La terre. Et au-delà.</p>
   </div>
+</div>
+<div class="footer-band">
+<div class="wrap">
   <div class="footer-links">
     <a href="a-propos.html">À propos</a>
     <a href="activites.html">Nos activités</a>
@@ -206,6 +213,8 @@
     <span>1, rue Ramez Bourgi</span>
   </div>
   <p class="legal-line">SA au capital de 150 000 000 FCFA · NINEA : 005136909 · RCCM : SN DKR 14431</p>
+</div>
+</div>
 </footer>
 
 <dialog class="detail" id="detail">
@@ -243,8 +252,45 @@ detail.addEventListener('click',e=>{if(e.target===detail){const r=detail.getBoun
 document.querySelector('#inquire').onclick=()=>{
   detail.close();
   document.querySelector('#contact').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
-  document.querySelector('.contact-email').focus({preventScroll:true});
+  document.querySelector('#contact a[href^="mailto:"]').focus({preventScroll:true});
 };
+
+// Diaporama d'ouverture : premier changement après 1,5 s, puis une paire toutes les 2,4 s, en
+// fondu ; le petit cadre suit le grand
+// avec un léger retard. Désactivé si le visiteur a demandé à réduire les animations.
+(()=>{
+  const PREMIER=1500,PAUSE=2400,FONDU=1100,RETARD=400;
+  const cadres=[...document.querySelectorAll('.slideshow')].map(c=>[...c.querySelectorAll('img')]);
+  if(cadres.length<2||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const total=cadres[0].length;
+  const charger=img=>{
+    // Le petit cadre est masqué sur mobile : inutile d'y télécharger ses images.
+    if(!img.closest('.slideshow').offsetParent)return Promise.resolve();
+    if(img.dataset.src){img.src=img.dataset.src;delete img.dataset.src}
+    return img.decode?img.decode().catch(()=>{}):Promise.resolve();
+  };
+  const montrer=(images,n)=>{
+    const actuelle=images.find(i=>i.classList.contains('is-on')),suivante=images[n];
+    if(!actuelle||actuelle===suivante)return;
+    actuelle.classList.replace('is-on','is-leaving');
+    suivante.classList.add('is-on');
+    setTimeout(()=>actuelle.classList.remove('is-leaving'),FONDU);
+  };
+  let index=0,minuterie=0;
+  const avancer=()=>{
+    const n=(index+1)%total;
+    Promise.all(cadres.map(c=>charger(c[n]))).then(()=>{
+      index=n;
+      montrer(cadres[0],n);
+      setTimeout(()=>montrer(cadres[1],n),RETARD);
+      cadres.forEach(c=>charger(c[(n+1)%total]));
+    });
+  };
+  const lancer=()=>{clearInterval(minuterie);if(!document.hidden)minuterie=setInterval(avancer,PAUSE)};
+  document.addEventListener('visibilitychange',lancer);
+  // Le visiteur lit vite l'accroche : la première paire cède la place sans attendre un tour complet.
+  addEventListener('load',()=>{cadres.forEach(c=>charger(c[1]));setTimeout(()=>{avancer();lancer()},PREMIER)});
+})();
 
 if(window.gsap&&window.ScrollTrigger&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
   gsap.registerPlugin(ScrollTrigger);

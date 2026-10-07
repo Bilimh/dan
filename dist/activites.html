@@ -17,7 +17,7 @@
     <a href="activites.html" aria-current="page">Nos activités</a>
     <a href="valeurs.html">Nos valeurs</a>
     <a href="organisation.html">Notre organisation</a>
-    <a class="nav-contact" href="index.html#contact">Nous contacter</a>
+    <a class="nav-contact" href="#contact">Nous contacter</a>
   </nav>
   <button id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
 </header>
@@ -62,19 +62,6 @@
         </figure>
       </div>
     </section>
-    <section class="entry">
-      <div class="entry-side">
-        <h2>L’élevage au quotidien.</h2>
-        <figure>
-          <video class="clip" controls playsinline preload="none" poster="assets/elevage-poster.webp" aria-label="Vidéo du suivi d’un veau">
-            <source src="assets/elevage.mp4" type="video/mp4">Votre navigateur ne permet pas la lecture de cette vidéo. <a href="assets/elevage.mp4">Ouvrir la vidéo</a>.</video>
-          <figcaption>Un aperçu de l’activité d’élevage.</figcaption>
-        </figure>
-      </div>
-      <div class="entry-body">
-        <figure class="frame photo-square photo-elevage"><img src="assets/elevage.webp" alt="Une vache et son veau au domaine" width="941" height="1670" loading="lazy"></figure>
-      </div>
-    </section>
     <section id="projets" class="entry">
       <h2>Les prochaines étapes.</h2>
       <div class="entry-body">
@@ -87,20 +74,32 @@
   </div>
   <aside class="page-aside">
     <figure>
-          <video class="clip" controls playsinline preload="none" poster="assets/piments-poster.webp" aria-label="Vidéo d’une culture de piments au domaine">
-            <source src="assets/piments.mp4" type="video/mp4">Votre navigateur ne permet pas la lecture de cette vidéo. <a href="assets/piments.mp4">Ouvrir la vidéo</a>.</video>
-          <figcaption>Culture de piments au domaine.</figcaption>
-        </figure>
+      <div class="frame clip-frame"><img src="assets/mangues.webp" alt="Mangues Kent du domaine" width="720" height="1280"></div>
+      <figcaption>Les mangues Kent du domaine.</figcaption>
+    </figure>
     <h2>Votre approvisionnement.</h2>
     <p>Produit, volume, destination et calendrier : échangez avec le domaine pour préciser vos besoins et les conditions de disponibilité.</p>
-    <a class="cta" href="index.html#contact">Contacter le domaine</a>
+    <a class="cta" href="#contact">Contacter le domaine</a>
+    <section class="aside-entry">
+      <h2>L’élevage au quotidien.</h2>
+      <figure class="frame photo-square photo-elevage"><img src="assets/elevage.webp" alt="Une vache et son veau au domaine" width="941" height="1670" loading="lazy"></figure>
+      <figure class="aside-clip">
+        <video class="clip" controls playsinline preload="none" poster="assets/elevage-poster.webp" aria-label="Vidéo du suivi d’un veau">
+          <source src="assets/elevage.mp4" type="video/mp4">Votre navigateur ne permet pas la lecture de cette vidéo. <a href="assets/elevage.mp4">Ouvrir la vidéo</a>.</video>
+        <figcaption>Un aperçu de l’activité d’élevage.</figcaption>
+      </figure>
+    </section>
   </aside>
 </main>
-<footer class="site-footer wrap">
+<footer id="contact" class="site-footer">
+<div class="wrap">
   <div class="footer-top">
     <a class="brand" href="index.html"><img src="assets/logo-dan.jpeg" alt="DAN — Domaine Agricole de Néma" width="273" height="103"></a>
     <p>La terre. Et au-delà.</p>
   </div>
+</div>
+<div class="footer-band">
+<div class="wrap">
   <div class="footer-links">
     <a href="a-propos.html">À propos</a>
     <a href="activites.html">Nos activités</a>
@@ -114,6 +113,8 @@
     <span>1, rue Ramez Bourgi</span>
   </div>
   <p class="legal-line">SA au capital de 150 000 000 FCFA · NINEA : 005136909 · RCCM : SN DKR 14431</p>
+</div>
+</div>
 </footer>
 <script>const menu=document.querySelector('#menu'),nav=document.querySelector('#nav');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Fermer':'Menu'});</script>
 </body>

@@ -16,7 +16,7 @@ Puis ouvrir http://localhost:8000. Aucun build ni installation npm nécessaire.
 - references-design/ : sauvegarde des anciens bandeaux verts.
 
 ## Principes de mise en page
-- Lignes droites, fond blanc, filets fins ; un seul aplat vert (la section contact).
+- Lignes droites, fond blanc, filets fins ; un seul aplat vert (la bande de liens du pied de page).
 - Polices hébergées dans dist/assets/fonts : Bodoni Moda (titres) et Jost (texte), licence SIL OFL.
 
 Le formulaire de contact désactivé est conservé dans dist-avant-refonte/index.html.

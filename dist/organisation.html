@@ -17,7 +17,7 @@
     <a href="activites.html">Nos activités</a>
     <a href="valeurs.html">Nos valeurs</a>
     <a href="organisation.html" aria-current="page">Notre organisation</a>
-    <a class="nav-contact" href="index.html#contact">Nous contacter</a>
+    <a class="nav-contact" href="#contact">Nous contacter</a>
   </nav>
   <button id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
 </header>
@@ -71,14 +71,18 @@
     </figure>
     <h2>Une expertise locale.</h2>
     <p>Les équipes du domaine disposent de connaissances en arboriculture et dans les métiers de ses différentes productions.</p>
-    <a class="cta" href="index.html#contact">Joindre le domaine</a>
+    <a class="cta" href="#contact">Joindre le domaine</a>
   </aside>
 </main>
-<footer class="site-footer wrap">
+<footer id="contact" class="site-footer">
+<div class="wrap">
   <div class="footer-top">
     <a class="brand" href="index.html"><img src="assets/logo-dan.jpeg" alt="DAN — Domaine Agricole de Néma" width="273" height="103"></a>
     <p>La terre. Et au-delà.</p>
   </div>
+</div>
+<div class="footer-band">
+<div class="wrap">
   <div class="footer-links">
     <a href="a-propos.html">À propos</a>
     <a href="activites.html">Nos activités</a>
@@ -92,6 +96,8 @@
     <span>1, rue Ramez Bourgi</span>
   </div>
   <p class="legal-line">SA au capital de 150 000 000 FCFA · NINEA : 005136909 · RCCM : SN DKR 14431</p>
+</div>
+</div>
 </footer>
 <script>const menu=document.querySelector('#menu'),nav=document.querySelector('#nav');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Fermer':'Menu'});</script>
 </body>

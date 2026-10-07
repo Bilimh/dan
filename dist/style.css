@@ -35,7 +35,7 @@ h1,h2,h3,p,ul,ol,dl,dd,figure,blockquote{margin:0}
 ul,ol{padding:0;list-style:none}
 
 /* Corps optique bridé : les déliés du Bodoni restent lisibles en grand. */
-h1,h2,h3,blockquote,.contact-number,.contact-email,.refs li,.footer-top p{font-optical-sizing:none;font-variation-settings:'opsz' 22}
+h1,h2,h3,blockquote,.refs li,.footer-top p{font-optical-sizing:none;font-variation-settings:'opsz' 22}
 h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;line-height:1.04;color:var(--forest)}
 h1 em,h2 em,blockquote em{font-style:italic;color:var(--green)}
 h2{font-size:clamp(38px,4.7vw,68px)}
@@ -45,7 +45,7 @@ p{color:var(--mute)}
 .wrap{max-width:1560px;margin-inline:auto;padding-inline:var(--gutter)}
 .g13{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));column-gap:var(--s3)}
 .g13>*{grid-column:1/-1}
-.section{padding-block:var(--s6)}
+.section{padding-block:var(--s4)}
 .section.section-tight{padding-top:0}
 
 .label{display:flex;align-items:center;gap:var(--s2);font:500 11px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
@@ -72,44 +72,56 @@ figcaption{margin-top:var(--s2);font-size:13px;letter-spacing:.04em;color:var(--
 #menu{display:none;font:500 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:var(--s2) 0}
 
 /* Accueil — ouverture */
-.hero{padding-top:var(--s5);row-gap:var(--s4)}
+.hero{padding-top:var(--s4);row-gap:var(--s4)}
 .hero-text{padding-top:var(--s4)}
 .hero h1{font-size:clamp(52px,7.6vw,110px);line-height:.98;letter-spacing:-.025em;margin:var(--s4) 0}
 .hero .cta{margin-top:var(--s4)}
 .hero-main{aspect-ratio:4/5}
 .hero-main img{object-position:60% 30%}
 .hero-inset{display:none;aspect-ratio:1/1}
-.hero-foot{display:flex;justify-content:space-between;gap:var(--s3);margin-top:var(--s5);padding-top:var(--s3);border-top:1px solid var(--line);font:500 11px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+/* Diaporama : les images sont superposées et parfaitement immobiles ; la nouvelle apparaît
+   en fondu au-dessus de l'ancienne. */
+.slideshow{position:relative}
+.slideshow img{position:absolute;inset:0;opacity:0;transition:opacity 1s cubic-bezier(.4,0,.2,1)}
+.slideshow img.is-leaving{opacity:1;z-index:1}
+.slideshow img.is-on{opacity:1;z-index:2}
+/* Petit cadre : léger agrandissement fixe, ancré en haut, qui garde le bas des photos hors champ. */
+.hero-inset img{transform:scale(1.1);transform-origin:center top}
+.hero-foot{display:flex;justify-content:space-between;gap:var(--s3);margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--line);font:500 11px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
 .hero-foot a:hover{color:var(--green-deep)}
 
 /* Accueil — la maison */
-.maison{row-gap:var(--s5)}
+.maison{row-gap:var(--s4)}
 .maison-photo{aspect-ratio:4/5;margin-top:var(--s4)}
+/* Seconde image de récolte, à droite du texte ; le haut de la photo est gardé (filigrane en bas). */
+.maison-side{aspect-ratio:1.618/1}
+.maison-side img{object-position:center top}
 .maison h2{margin:var(--s3) 0 var(--s4)}
 .maison-text>p:not(.label){font-size:19px;max-width:46ch}
 .facts{display:flex;flex-wrap:wrap;margin:var(--s4) 0;font-size:14px;letter-spacing:.06em}
 .facts li{padding:0 var(--s3);border-left:1px solid var(--line)}
 .facts li:first-child{padding-left:0;border-left:0}
-.quality{margin-top:var(--s5);padding-top:var(--s3);border-top:1px solid var(--line);max-width:46ch}
+.quality{margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--line);max-width:46ch}
 .quality h3{font-size:24px}
 .quality p{margin:var(--s2) 0 var(--s3);font:500 12px/1.8 var(--sans);letter-spacing:.18em;text-transform:uppercase}
 
 /* Accueil — les métiers */
-.section-head{display:grid;gap:var(--s3);align-items:end;margin-bottom:var(--s5)}
+.section-head{display:grid;gap:var(--s3);align-items:end;margin-bottom:var(--s4)}
 .section-head .label{margin-bottom:var(--s3)}
 .section-head>p{font:500 12px/1.6 var(--sans);letter-spacing:.2em;text-transform:uppercase}
-.metier{padding-top:var(--s3);border-top:1px solid var(--green);margin-bottom:var(--s5)}
+.metier{padding-top:var(--s3);border-top:1px solid var(--green);margin-bottom:var(--s4)}
 .metier .label{margin-bottom:var(--s3)}
 .metier h3{margin-bottom:var(--s2)}
 .metier ul{margin-top:var(--s3);font-size:15px}
 .metier li{padding:var(--s2) 0;border-top:1px solid var(--line)}
 
 /* Accueil — la sélection */
-.filters{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);margin-bottom:var(--s5);padding-bottom:var(--s3);border-bottom:1px solid var(--line)}
+.filters{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);margin-bottom:var(--s4);padding-bottom:var(--s3);border-bottom:1px solid var(--line)}
 .filter{font:500 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--mute);padding-bottom:var(--s1);border-bottom:1px solid transparent;transition:color .3s,border-color .3s}
 .filter:hover{color:var(--ink)}
 .filter[aria-pressed=true]{color:var(--ink);border-color:var(--gold)}
-.catalog{row-gap:var(--s5)}
+.section-head .filters{margin-bottom:0}
+.catalog{row-gap:var(--s4)}
 .catalog>[hidden]{display:none}
 .product .frame{aspect-ratio:1/1;margin-bottom:var(--s3)}
 .product .label{margin-bottom:var(--s2)}
@@ -124,10 +136,13 @@ figcaption{margin-top:var(--s2);font-size:13px;letter-spacing:.04em;color:var(--
 .terre{row-gap:var(--s4);align-items:end}
 .terre .frame{aspect-ratio:1.618/1}
 .terre img{transform:scale(1.1);transform-origin:center top}
+/* Colonne étroite : une petite image au-dessus de la citation, pour ne pas laisser de vide. */
+.terre-side{display:flex;flex-direction:column;justify-content:space-between;gap:var(--s4)}
+.terre .terre-inset img{object-position:center 45%;transform:none}
 .terre blockquote{padding-top:var(--s3);border-top:1px solid var(--gold);font:400 clamp(30px,3.1vw,44px)/1.12 var(--serif);letter-spacing:-.015em}
 
 /* Accueil — l'export */
-.export{row-gap:var(--s5)}
+.export{row-gap:var(--s4)}
 .export h2{margin:var(--s3) 0 var(--s4)}
 .export-text p{max-width:40ch}
 .export .cta{margin-top:var(--s4)}
@@ -138,37 +153,29 @@ figcaption{margin-top:var(--s2);font-size:13px;letter-spacing:.04em;color:var(--
 .steps p{grid-column:2;margin-top:var(--s1)}
 
 /* Accueil — l'équipe */
-.team{row-gap:var(--s5)}
-.team h2{margin:var(--s3) 0 var(--s5)}
+.team{row-gap:var(--s4)}
+.team h2{margin:var(--s3) 0 var(--s4)}
 .team-row{display:grid;gap:var(--s1) var(--s3);align-items:baseline;padding:var(--s3) 0;border-top:1px solid var(--line);transition:color .3s}
 .team-row:hover h3{color:var(--green-deep)}
 .team-row small{font:500 11px/1.6 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
 .team-list{border-bottom:1px solid var(--line);margin-bottom:var(--s4)}
+/* Bandeau horizontal sous la liste, sur toute la largeur de la colonne. */
+.team-note{margin-top:var(--s4)}
+.team-note .frame{aspect-ratio:1.618/1}
+.team-note img{transform:scale(1.14);transform-origin:center top}
 .team-photo{aspect-ratio:4/5}
 .team-photo img{object-position:center 45%}
 
-/* Contact — le seul aplat du site, au vert du logo */
-.contact{background:var(--green-light);color:var(--ink);padding-block:var(--s6)}
-.contact .g13{row-gap:var(--s5)}
-.contact .label{color:var(--ink)}
-.contact .label::before{background:var(--ink)}
-.contact h2{margin-top:var(--s3)}
-.contact h2{color:var(--ink)}
-.contact h2 em{color:var(--green-deep)}
-.contact-number{display:block;font:400 clamp(34px,5.4vw,76px)/1.05 var(--serif);letter-spacing:-.02em}
-.contact-email{display:inline-block;margin:var(--s4) 0 var(--s3);padding-bottom:var(--s1);border-bottom:1px solid var(--ink);font:400 clamp(22px,2.4vw,32px)/1.2 var(--serif);overflow-wrap:anywhere}
-.contact-address{color:var(--ink);font-size:15px;letter-spacing:.06em}
-.contact-number,.contact-email{font-weight:500;font-variation-settings:'opsz' 9}
-.contact a:focus-visible{outline-color:var(--ink)}
-
-/* Pied de page */
-.site-footer{padding-block:var(--s5) var(--s4);font-size:13px;color:var(--mute)}
-.footer-top{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);padding-bottom:var(--s4);border-bottom:1px solid var(--line)}
+/* Pied de page : le logo reste sur le fond clair ; la bande de liens est le seul aplat du site,
+   au vert du logo. C'est aussi la cible des liens « Nous contacter ». */
+.site-footer{font-size:13px}
+.footer-top{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);padding-block:var(--s4);border-top:1px solid var(--line)}
 .footer-top p{font:italic 400 21px/1.2 var(--serif);color:var(--green)}
-.footer-links{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);padding-block:var(--s4);font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.footer-band{background:var(--green-light);color:var(--ink);padding-bottom:var(--s3)}
+.footer-links{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);padding-block:var(--s4);font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase}
 .footer-links a:hover{color:var(--green-deep)}
-.footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s1) var(--s3);padding-top:var(--s3);border-top:1px solid var(--line)}
-.legal-line{margin-top:var(--s1);font-size:12px}
+.footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s1) var(--s3);padding-top:var(--s3);border-top:1px solid #1d2b1233}
+.legal-line{margin-top:var(--s1);font-size:12px;color:var(--ink)}
 
 /* Fiche produit */
 .detail{width:min(560px,calc(100% - 42px));padding:var(--s5);border:0;border-top:2px solid var(--gold);background:var(--paper);color:var(--ink)}
@@ -178,10 +185,10 @@ figcaption{margin-top:var(--s2);font-size:13px;letter-spacing:.04em;color:var(--
 .detail .cta{margin-top:var(--s4)}
 
 /* Pages intérieures */
-.page{padding-block:var(--s5) var(--s6);row-gap:var(--s5)}
-.page-head{padding-bottom:var(--s5)}
+.page{padding-block:var(--s4);row-gap:var(--s4)}
+.page-head{padding-bottom:var(--s3)}
 .page-head h1{font-size:clamp(44px,6.2vw,89px);line-height:1;letter-spacing:-.025em;margin:var(--s4) 0}
-.entry{display:grid;gap:var(--s3) var(--s4);padding-block:var(--s4);border-top:1px solid var(--line)}
+.entry{display:grid;gap:var(--s3) var(--s4);padding-block:var(--s3);border-top:1px solid var(--line)}
 .entry h2{font-size:30px;line-height:1.12}
 .entry-body>*+*{margin-top:var(--s3)}
 .entry-side>*+*{margin-top:var(--s3)}
@@ -196,11 +203,27 @@ figcaption{margin-top:var(--s2);font-size:13px;letter-spacing:.04em;color:var(--
 .rows li:first-child{border-top:0;padding-top:0}
 .refs{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--green)}
 .refs li{padding:var(--s3) 0;border-bottom:1px solid var(--line);font:400 21px/1.2 var(--serif)}
-.back{margin-top:var(--s5)}
+/* Image large en fin de colonne : un bandeau horizontal qui ferme la page. */
+.entry-wide{padding-top:var(--s3);border-top:1px solid var(--line)}
+.entry-wide .frame{aspect-ratio:1.618/1}
+.entry-wide img{object-position:center top}
+/* Grande image sur toute la largeur, sous les deux colonnes. Au format 2 / 1, ancrée en haut :
+   presque toute la photo est visible, seul le bas (filigrane de l'appareil) reste hors champ. */
+.page-wide .frame{aspect-ratio:2/1}
+.page-wide img{object-position:center top}
+.back{margin-top:var(--s3)}
 .page-aside .frame{aspect-ratio:1/1.618}
 .page-aside .frame img{object-position:center top}
+/* Image au format de l'ancienne vidéo verticale (9 / 16). */
+.page-aside .clip-frame{aspect-ratio:9/16}
 .page-aside h2{font-size:30px;line-height:1.12;margin:var(--s4) 0 var(--s2)}
 .page-aside .link,.page-aside .cta{margin-top:var(--s4)}
+/* Suite de la colonne étroite : une rubrique reprise de la colonne large pour équilibrer la page. */
+.aside-entry{margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--line)}
+.page-aside .aside-entry h2{margin:0 0 var(--s3)}
+.page-aside .aside-entry .frame{aspect-ratio:1/1}
+.page-aside .aside-entry .photo-elevage img{object-position:center 22%}
+.aside-clip{width:61.8%;margin:var(--s3) 0 0 auto}
 .fact-list{margin-top:var(--s4);border-bottom:1px solid var(--line)}
 .fact-list div{display:flex;justify-content:space-between;gap:var(--s3);padding:var(--s2) 0;border-top:1px solid var(--line)}
 .fact-list dt{font:500 11px/1.8 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
@@ -208,52 +231,66 @@ figcaption{margin-top:var(--s2);font-size:13px;letter-spacing:.04em;color:var(--
 
 /* Composition large : 8 / 5 en alternance, décalages sur la suite de Fibonacci */
 @media(min-width:901px){
-  .section{padding-block:var(--s7)}
+  .section{padding-block:var(--s5)}
 
-  .hero{padding-top:var(--s6)}
+  .hero{padding-top:var(--s4)}
   .hero-text{grid-column:1/8;grid-row:1}
   .hero-main{grid-column:9/14;grid-row:1}
-  .hero-inset{display:block;grid-column:6/9;grid-row:1;align-self:end;margin-bottom:calc(var(--s5)*-1);z-index:1}
-  .hero-foot{margin-top:var(--s6)}
+  .hero-inset{display:block;grid-column:6/9;grid-row:1;align-self:end;margin-bottom:calc(var(--s4)*-1);z-index:1}
+  .hero-foot{margin-top:var(--s5)}
 
-  .maison-photo{grid-column:1/5;margin-top:var(--s6)}
-  .maison-text{grid-column:6/14}
+  .maison-photo{grid-column:1/5;margin-top:var(--s4)}
+  .maison-text{grid-column:6/11}
+  .maison-side{grid-column:11/14;aspect-ratio:1/1.618;margin-top:var(--s6)}
 
   .section-head{grid-template-columns:1.618fr 1fr}
   .section-head>p{text-align:right}
+  /* Sélection : les filtres deviennent un sommaire vertical à droite du titre, au lieu d'une ligne dessous. */
+  .section-head .filters{flex-direction:column;flex-wrap:nowrap;gap:0;padding:0;border-top:1px solid var(--green);border-bottom:1px solid var(--line)}
+  .section-head .filter{display:flex;align-items:center;justify-content:space-between;padding:var(--s2) 0;border-bottom:0;border-top:1px solid var(--line);text-align:left}
+  .section-head .filter:first-child{border-top:0}
+  .section-head .filter::after{content:'';width:var(--s4);height:1px;background:transparent;transition:background .3s}
+  .section-head .filter[aria-pressed=true]::after{background:var(--gold)}
   .metiers .g13{align-items:start}
   .metier{margin-bottom:0}
   .metier:nth-child(1){grid-column:1/5}
-  .metier:nth-child(2){grid-column:5/9;margin-top:var(--s5)}
-  .metier:nth-child(3){grid-column:10/14;margin-top:var(--s6)}
+  .metier:nth-child(2){grid-column:5/9;margin-top:var(--s3)}
+  .metier:nth-child(3){grid-column:10/14;margin-top:var(--s4)}
 
-  .catalog{row-gap:var(--s6);align-items:start}
+  .catalog{row-gap:var(--s4);align-items:start}
   .p-fruit{grid-column:1/9;grid-row:1}
-  .p-seed{grid-column:9/14;grid-row:1;margin-top:var(--s6)}
+  .p-seed{grid-column:9/14;grid-row:1;margin-top:var(--s4)}
   .p-plant{grid-column:1/6;grid-row:2}
-  .p-orchard{grid-column:6/14;grid-row:2;margin-top:var(--s6)}
+  .p-orchard{grid-column:6/14;grid-row:2;margin-top:var(--s4)}
   .catalog.is-filtered>*{grid-column:1/9;grid-row:1;margin-top:0}
-  .catalog.is-filtered .p-orchard{grid-column:9/14;margin-top:var(--s6)}
+  .catalog.is-filtered .p-orchard{grid-column:9/14;margin-top:var(--s4)}
   .catalog.is-filtered .p-orchard .frame{aspect-ratio:4/5}
 
-  .terre .frame{grid-column:1/9}
-  .terre blockquote{grid-column:9/14}
+  .terre>.frame{grid-column:1/9;margin-top:var(--s4)}
+  /* La colonne étroite remonte dans l'espace laissé libre sous le verger. */
+  .terre-side{grid-column:9/14;align-self:stretch;margin-top:calc((var(--s6) + var(--s3))*-1)}
+  /* L'image descend jusqu'à la citation : il ne reste qu'un intervalle régulier entre les deux. */
+  .terre .terre-inset{flex:1;aspect-ratio:auto;position:relative;min-height:144px}
+  .terre .terre-inset img{position:absolute;inset:0}
 
   .export-text{grid-column:1/6}
-  .steps{grid-column:7/14;margin-top:var(--s5)}
+  .steps{grid-column:7/14;margin-top:var(--s4)}
 
   .team-text{grid-column:1/8}
-  .team-photo{grid-column:9/14;margin-top:var(--s6)}
+  /* La photo prend la hauteur de la colonne de texte : les deux colonnes finissent ensemble. */
+  .team-photo{grid-column:9/14;margin-top:var(--s4);aspect-ratio:auto;position:relative}
+  .team-photo img{position:absolute;inset:0}
+  .team-note .frame{aspect-ratio:2.618/1}
+  .team-note img{transform:none;object-position:center 30%}
   .team-row{grid-template-columns:1fr 1.618fr}
 
-  .contact{padding-block:var(--s7)}
-  .contact-heading{grid-column:1/6}
-  .contact-coordinates{grid-column:7/14}
 
-  .page{padding-top:var(--s6)}
+  .page{padding-top:var(--s4)}
   .page-main{grid-column:1/8}
-  .page-aside{grid-column:9/14;margin-top:var(--s7)}
+  .page-aside{grid-column:9/14;margin-top:var(--s5)}
   .entry{grid-template-columns:1fr 1.618fr}
+  .entry-wide .frame{aspect-ratio:2.618/1}
+  .entry-wide img{object-position:center 20%}
 }
 
 @media(max-width:1000px){
@@ -266,7 +303,9 @@ figcaption{margin-top:var(--s2);font-size:13px;letter-spacing:.04em;color:var(--
 @media(max-width:900px){
   .maison-photo{aspect-ratio:1.618/1;margin-top:0}
   .page-aside .frame{aspect-ratio:4/5}
-  .page-aside .clip{max-width:340px}
+  .page-aside .aside-entry .frame{aspect-ratio:1/1}
+  .page-aside .clip,.page-aside .clip-frame{max-width:340px}
+  .page-aside .clip-frame{aspect-ratio:9/16}
   .site-header{height:76px}
   .brand img{width:128px}
 }
