@@ -47,6 +47,8 @@ p{color:var(--mute)}
 .g13>*{grid-column:1/-1}
 .section{padding-block:var(--s4)}
 .section.section-tight{padding-top:0}
+/* La dernière section ne laisse qu'un intervalle court avant le pied de page. */
+main>.section:last-child{padding-bottom:var(--s3)}
 
 .label{display:flex;align-items:center;gap:var(--s2);font:500 11px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
 .label::before{content:'';flex:none;width:var(--s4);height:1px;background:var(--gold)}
@@ -73,7 +75,7 @@ figcaption{margin-top:var(--s2);font-size:13px;letter-spacing:.04em;color:var(--
 
 /* Accueil — ouverture */
 .hero{padding-top:var(--s4);row-gap:var(--s4)}
-.hero-text{padding-top:var(--s4)}
+.hero-text{padding-top:0}
 .hero h1{font-size:clamp(52px,7.6vw,110px);line-height:.98;letter-spacing:-.025em;margin:var(--s4) 0}
 .hero .cta{margin-top:var(--s4)}
 .hero-main{aspect-ratio:4/5}
@@ -87,7 +89,7 @@ figcaption{margin-top:var(--s2);font-size:13px;letter-spacing:.04em;color:var(--
 .slideshow img.is-on{opacity:1;z-index:2}
 /* Petit cadre : léger agrandissement fixe, ancré en haut, qui garde le bas des photos hors champ. */
 .hero-inset img{transform:scale(1.1);transform-origin:center top}
-.hero-foot{display:flex;justify-content:space-between;gap:var(--s3);margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--line);font:500 11px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.hero-foot{display:flex;justify-content:space-between;gap:var(--s3);margin-top:0;padding-top:var(--s3);border-top:1px solid var(--line);font:500 11px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
 .hero-foot a:hover{color:var(--green-deep)}
 
 /* Accueil — la maison */
@@ -109,7 +111,9 @@ figcaption{margin-top:var(--s2);font-size:13px;letter-spacing:.04em;color:var(--
 .section-head{display:grid;gap:var(--s3);align-items:end;margin-bottom:var(--s4)}
 .section-head .label{margin-bottom:var(--s3)}
 .section-head>p{font:500 12px/1.6 var(--sans);letter-spacing:.2em;text-transform:uppercase}
-.metier{padding-top:var(--s3);border-top:1px solid var(--green);margin-bottom:var(--s4)}
+.metier{padding-top:var(--s3);border-top:1px solid var(--green);margin-bottom:var(--s3)}
+/* Le dernier métier ne cumule pas sa marge avec celle de la section. */
+.metier:last-child{margin-bottom:0}
 .metier .label{margin-bottom:var(--s3)}
 .metier h3{margin-bottom:var(--s2)}
 .metier ul{margin-top:var(--s3);font-size:15px}
@@ -169,7 +173,7 @@ figcaption{margin-top:var(--s2);font-size:13px;letter-spacing:.04em;color:var(--
 /* Pied de page : le logo reste sur le fond clair ; la bande de liens est le seul aplat du site,
    au vert du logo. C'est aussi la cible des liens « Nous contacter ». */
 .site-footer{font-size:13px}
-.footer-top{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);padding-block:var(--s4);border-top:1px solid var(--line)}
+.footer-top{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);padding-block:var(--s2);border-top:1px solid var(--line)}
 .footer-top p{font:italic 400 21px/1.2 var(--serif);color:var(--green)}
 .footer-band{background:var(--green-light);color:var(--ink);padding-bottom:var(--s3)}
 .footer-links{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);padding-block:var(--s4);font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase}
@@ -185,7 +189,7 @@ figcaption{margin-top:var(--s2);font-size:13px;letter-spacing:.04em;color:var(--
 .detail .cta{margin-top:var(--s4)}
 
 /* Pages intérieures */
-.page{padding-block:var(--s4);row-gap:var(--s4)}
+.page{padding-block:var(--s4) var(--s3);row-gap:var(--s4)}
 .page-head{padding-bottom:var(--s3)}
 .page-head h1{font-size:clamp(44px,6.2vw,89px);line-height:1;letter-spacing:-.025em;margin:var(--s4) 0}
 .entry{display:grid;gap:var(--s3) var(--s4);padding-block:var(--s3);border-top:1px solid var(--line)}
@@ -234,7 +238,7 @@ figcaption{margin-top:var(--s2);font-size:13px;letter-spacing:.04em;color:var(--
   .section{padding-block:var(--s5)}
 
   .hero{padding-top:var(--s4)}
-  .hero-text{grid-column:1/8;grid-row:1}
+  .hero-text{grid-column:1/8;grid-row:1;padding-top:var(--s4)}
   .hero-main{grid-column:9/14;grid-row:1}
   .hero-inset{display:block;grid-column:6/9;grid-row:1;align-self:end;margin-bottom:calc(var(--s4)*-1);z-index:1}
   .hero-foot{margin-top:var(--s5)}
@@ -313,7 +317,7 @@ figcaption{margin-top:var(--s2);font-size:13px;letter-spacing:.04em;color:var(--
 @media(max-width:560px){
   body{font-size:16px}
   .hero-foot span{display:none}
-  .footer-top{flex-direction:column;align-items:flex-start}
+  .footer-top p{font-size:17px;text-align:right}
   .detail{padding:var(--s5) var(--s3) var(--s4)}
   .refs{grid-template-columns:1fr}
 }
