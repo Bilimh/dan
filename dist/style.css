@@ -1,0 +1,285 @@
+/* Domaine Agricole de Néma
+   Grille de 13 colonnes partagée en 8 / 5 (nombre d'or),
+   espacements sur la suite de Fibonacci : 8 · 13 · 21 · 34 · 55 · 89 · 144. */
+
+@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400 500;font-display:swap;src:url(assets/fonts/bodoni-moda.woff2) format('woff2')}
+@font-face{font-family:'Bodoni Moda';font-style:italic;font-weight:400 500;font-display:swap;src:url(assets/fonts/bodoni-moda-italic.woff2) format('woff2')}
+@font-face{font-family:'Jost';font-style:normal;font-weight:300 500;font-display:swap;src:url(assets/fonts/jost.woff2) format('woff2')}
+
+:root{
+  --paper:#fdfcf8;
+  /* Vert du logo et ses nuances : --green est la teinte exacte, les deux autres en sont des tons plus profonds. */
+  --ink:#1d2b12;
+  --green:#78ae44;
+  --green-deep:#3f6b22;
+  --forest:#2f4f19;
+  --green-light:#b9d896;
+  --gold:#f5ae3d;
+  --mute:#5a6552;
+  --line:#dfe2d6;
+  --s1:8px;--s2:13px;--s3:21px;--s4:34px;--s5:55px;--s6:89px;--s7:144px;
+  --gutter:clamp(21px,6.18vw,89px);
+  --serif:'Bodoni Moda','Didot','Bodoni 72',Georgia,serif;
+  --sans:'Jost','Helvetica Neue',Arial,sans-serif;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--s4)}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.618 var(--sans);-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0;padding:0}
+a:focus-visible,button:focus-visible,video:focus-visible{outline:1px solid var(--ink);outline-offset:5px}
+::selection{background:var(--gold);color:var(--ink)}
+h1,h2,h3,p,ul,ol,dl,dd,figure,blockquote{margin:0}
+ul,ol{padding:0;list-style:none}
+
+/* Corps optique bridé : les déliés du Bodoni restent lisibles en grand. */
+h1,h2,h3,blockquote,.contact-number,.contact-email,.refs li,.footer-top p{font-optical-sizing:none;font-variation-settings:'opsz' 22}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;line-height:1.04;color:var(--forest)}
+h1 em,h2 em,blockquote em{font-style:italic;color:var(--green)}
+h2{font-size:clamp(38px,4.7vw,68px)}
+h3{font-size:clamp(26px,2.3vw,32px);line-height:1.15}
+p{color:var(--mute)}
+
+.wrap{max-width:1560px;margin-inline:auto;padding-inline:var(--gutter)}
+.g13{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));column-gap:var(--s3)}
+.g13>*{grid-column:1/-1}
+.section{padding-block:var(--s6)}
+.section.section-tight{padding-top:0}
+
+.label{display:flex;align-items:center;gap:var(--s2);font:500 11px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.label::before{content:'';flex:none;width:var(--s4);height:1px;background:var(--gold)}
+.lede{font-size:19px;max-width:34ch}
+
+.link{display:inline-block;font:500 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding-bottom:var(--s1);border-bottom:1px solid var(--gold);transition:border-color .3s,color .3s}
+.link:hover{color:var(--green-deep);border-color:var(--green)}
+.cta{display:inline-block;font:500 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:var(--s3) var(--s4);border:1px solid var(--ink);transition:background .3s,color .3s}
+.cta:hover{background:var(--green);border-color:var(--green);color:var(--ink)}
+
+.frame{overflow:hidden;background:#eceee4}
+.frame img{width:100%;height:100%;object-fit:cover}
+figcaption{margin-top:var(--s2);font-size:13px;letter-spacing:.04em;color:var(--mute)}
+
+/* En-tête */
+.site-header{position:relative;display:flex;align-items:center;justify-content:space-between;height:var(--s6);border-bottom:1px solid var(--line)}
+.brand{flex:none}
+.brand img{width:144px;height:auto;margin-left:-8px;mix-blend-mode:multiply}
+.site-nav{display:flex;align-items:center;gap:var(--s4);font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.site-nav a{padding-block:var(--s1);border-bottom:1px solid transparent;transition:border-color .3s,color .3s}
+.site-nav a:hover,.site-nav a[aria-current]{color:var(--green-deep);border-color:var(--green)}
+.site-nav .nav-contact{border-color:var(--ink)}
+#menu{display:none;font:500 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:var(--s2) 0}
+
+/* Accueil — ouverture */
+.hero{padding-top:var(--s5);row-gap:var(--s4)}
+.hero-text{padding-top:var(--s4)}
+.hero h1{font-size:clamp(52px,7.6vw,110px);line-height:.98;letter-spacing:-.025em;margin:var(--s4) 0}
+.hero .cta{margin-top:var(--s4)}
+.hero-main{aspect-ratio:4/5}
+.hero-main img{object-position:60% 30%}
+.hero-inset{display:none;aspect-ratio:1/1}
+.hero-foot{display:flex;justify-content:space-between;gap:var(--s3);margin-top:var(--s5);padding-top:var(--s3);border-top:1px solid var(--line);font:500 11px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.hero-foot a:hover{color:var(--green-deep)}
+
+/* Accueil — la maison */
+.maison{row-gap:var(--s5)}
+.maison-photo{aspect-ratio:4/5;margin-top:var(--s4)}
+.maison h2{margin:var(--s3) 0 var(--s4)}
+.maison-text>p:not(.label){font-size:19px;max-width:46ch}
+.facts{display:flex;flex-wrap:wrap;margin:var(--s4) 0;font-size:14px;letter-spacing:.06em}
+.facts li{padding:0 var(--s3);border-left:1px solid var(--line)}
+.facts li:first-child{padding-left:0;border-left:0}
+.quality{margin-top:var(--s5);padding-top:var(--s3);border-top:1px solid var(--line);max-width:46ch}
+.quality h3{font-size:24px}
+.quality p{margin:var(--s2) 0 var(--s3);font:500 12px/1.8 var(--sans);letter-spacing:.18em;text-transform:uppercase}
+
+/* Accueil — les métiers */
+.section-head{display:grid;gap:var(--s3);align-items:end;margin-bottom:var(--s5)}
+.section-head .label{margin-bottom:var(--s3)}
+.section-head>p{font:500 12px/1.6 var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.metier{padding-top:var(--s3);border-top:1px solid var(--green);margin-bottom:var(--s5)}
+.metier .label{margin-bottom:var(--s3)}
+.metier h3{margin-bottom:var(--s2)}
+.metier ul{margin-top:var(--s3);font-size:15px}
+.metier li{padding:var(--s2) 0;border-top:1px solid var(--line)}
+
+/* Accueil — la sélection */
+.filters{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);margin-bottom:var(--s5);padding-bottom:var(--s3);border-bottom:1px solid var(--line)}
+.filter{font:500 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--mute);padding-bottom:var(--s1);border-bottom:1px solid transparent;transition:color .3s,border-color .3s}
+.filter:hover{color:var(--ink)}
+.filter[aria-pressed=true]{color:var(--ink);border-color:var(--gold)}
+.catalog{row-gap:var(--s5)}
+.catalog>[hidden]{display:none}
+.product .frame{aspect-ratio:1/1;margin-bottom:var(--s3)}
+.product .label{margin-bottom:var(--s2)}
+.product p:not(.label){margin:var(--s1) 0 var(--s3);max-width:38ch}
+.p-fruit .frame{aspect-ratio:4/3}
+.p-seed img{object-position:center 32%}
+.p-plant img{object-position:center 22%}
+.p-orchard .frame{aspect-ratio:1.618/1}
+.p-orchard img{object-position:center 40%}
+
+/* Accueil — la terre */
+.terre{row-gap:var(--s4);align-items:end}
+.terre .frame{aspect-ratio:1.618/1}
+.terre img{transform:scale(1.1);transform-origin:center top}
+.terre blockquote{padding-top:var(--s3);border-top:1px solid var(--gold);font:400 clamp(30px,3.1vw,44px)/1.12 var(--serif);letter-spacing:-.015em}
+
+/* Accueil — l'export */
+.export{row-gap:var(--s5)}
+.export h2{margin:var(--s3) 0 var(--s4)}
+.export-text p{max-width:40ch}
+.export .cta{margin-top:var(--s4)}
+.steps li{display:grid;grid-template-columns:var(--s5) 1fr;gap:0 var(--s3);align-items:baseline;padding:var(--s3) 0;border-top:1px solid var(--line)}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps span{font:500 12px/1 var(--sans);letter-spacing:.2em;color:var(--green-deep)}
+.steps h3{font-size:26px}
+.steps p{grid-column:2;margin-top:var(--s1)}
+
+/* Accueil — l'équipe */
+.team{row-gap:var(--s5)}
+.team h2{margin:var(--s3) 0 var(--s5)}
+.team-row{display:grid;gap:var(--s1) var(--s3);align-items:baseline;padding:var(--s3) 0;border-top:1px solid var(--line);transition:color .3s}
+.team-row:hover h3{color:var(--green-deep)}
+.team-row small{font:500 11px/1.6 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.team-list{border-bottom:1px solid var(--line);margin-bottom:var(--s4)}
+.team-photo{aspect-ratio:4/5}
+.team-photo img{object-position:center 45%}
+
+/* Contact — le seul aplat du site, au vert du logo */
+.contact{background:var(--green-light);color:var(--ink);padding-block:var(--s6)}
+.contact .g13{row-gap:var(--s5)}
+.contact .label{color:var(--ink)}
+.contact .label::before{background:var(--ink)}
+.contact h2{margin-top:var(--s3)}
+.contact h2{color:var(--ink)}
+.contact h2 em{color:var(--green-deep)}
+.contact-number{display:block;font:400 clamp(34px,5.4vw,76px)/1.05 var(--serif);letter-spacing:-.02em}
+.contact-email{display:inline-block;margin:var(--s4) 0 var(--s3);padding-bottom:var(--s1);border-bottom:1px solid var(--ink);font:400 clamp(22px,2.4vw,32px)/1.2 var(--serif);overflow-wrap:anywhere}
+.contact-address{color:var(--ink);font-size:15px;letter-spacing:.06em}
+.contact-number,.contact-email{font-weight:500;font-variation-settings:'opsz' 9}
+.contact a:focus-visible{outline-color:var(--ink)}
+
+/* Pied de page */
+.site-footer{padding-block:var(--s5) var(--s4);font-size:13px;color:var(--mute)}
+.footer-top{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);padding-bottom:var(--s4);border-bottom:1px solid var(--line)}
+.footer-top p{font:italic 400 21px/1.2 var(--serif);color:var(--green)}
+.footer-links{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);padding-block:var(--s4);font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.footer-links a:hover{color:var(--green-deep)}
+.footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s1) var(--s3);padding-top:var(--s3);border-top:1px solid var(--line)}
+.legal-line{margin-top:var(--s1);font-size:12px}
+
+/* Fiche produit */
+.detail{width:min(560px,calc(100% - 42px));padding:var(--s5);border:0;border-top:2px solid var(--gold);background:var(--paper);color:var(--ink)}
+.detail::backdrop{background:#1d2b1299}
+.detail h2{font-size:42px;margin:var(--s3) 0}
+.detail .close{position:absolute;top:var(--s3);right:var(--s3);font:500 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.detail .cta{margin-top:var(--s4)}
+
+/* Pages intérieures */
+.page{padding-block:var(--s5) var(--s6);row-gap:var(--s5)}
+.page-head{padding-bottom:var(--s5)}
+.page-head h1{font-size:clamp(44px,6.2vw,89px);line-height:1;letter-spacing:-.025em;margin:var(--s4) 0}
+.entry{display:grid;gap:var(--s3) var(--s4);padding-block:var(--s4);border-top:1px solid var(--line)}
+.entry h2{font-size:30px;line-height:1.12}
+.entry-body>*+*{margin-top:var(--s3)}
+.entry-side>*+*{margin-top:var(--s3)}
+.entry .label{margin-bottom:var(--s3)}
+.photo{aspect-ratio:4/5}
+.photo-square{aspect-ratio:1/1}
+.photo-champ img{object-position:center 27%}
+.photo-elevage img{object-position:center 22%}
+.clip{width:100%;aspect-ratio:9/16;object-fit:cover;background:var(--ink)}
+.entry-side .clip{max-width:300px}
+.rows li{padding:var(--s2) 0;border-top:1px solid var(--line)}
+.rows li:first-child{border-top:0;padding-top:0}
+.refs{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--green)}
+.refs li{padding:var(--s3) 0;border-bottom:1px solid var(--line);font:400 21px/1.2 var(--serif)}
+.back{margin-top:var(--s5)}
+.page-aside .frame{aspect-ratio:1/1.618}
+.page-aside .frame img{object-position:center top}
+.page-aside h2{font-size:30px;line-height:1.12;margin:var(--s4) 0 var(--s2)}
+.page-aside .link,.page-aside .cta{margin-top:var(--s4)}
+.fact-list{margin-top:var(--s4);border-bottom:1px solid var(--line)}
+.fact-list div{display:flex;justify-content:space-between;gap:var(--s3);padding:var(--s2) 0;border-top:1px solid var(--line)}
+.fact-list dt{font:500 11px/1.8 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.fact-list dd{text-align:right}
+
+/* Composition large : 8 / 5 en alternance, décalages sur la suite de Fibonacci */
+@media(min-width:901px){
+  .section{padding-block:var(--s7)}
+
+  .hero{padding-top:var(--s6)}
+  .hero-text{grid-column:1/8;grid-row:1}
+  .hero-main{grid-column:9/14;grid-row:1}
+  .hero-inset{display:block;grid-column:6/9;grid-row:1;align-self:end;margin-bottom:calc(var(--s5)*-1);z-index:1}
+  .hero-foot{margin-top:var(--s6)}
+
+  .maison-photo{grid-column:1/5;margin-top:var(--s6)}
+  .maison-text{grid-column:6/14}
+
+  .section-head{grid-template-columns:1.618fr 1fr}
+  .section-head>p{text-align:right}
+  .metiers .g13{align-items:start}
+  .metier{margin-bottom:0}
+  .metier:nth-child(1){grid-column:1/5}
+  .metier:nth-child(2){grid-column:5/9;margin-top:var(--s5)}
+  .metier:nth-child(3){grid-column:10/14;margin-top:var(--s6)}
+
+  .catalog{row-gap:var(--s6);align-items:start}
+  .p-fruit{grid-column:1/9;grid-row:1}
+  .p-seed{grid-column:9/14;grid-row:1;margin-top:var(--s6)}
+  .p-plant{grid-column:1/6;grid-row:2}
+  .p-orchard{grid-column:6/14;grid-row:2;margin-top:var(--s6)}
+  .catalog.is-filtered>*{grid-column:1/9;grid-row:1;margin-top:0}
+  .catalog.is-filtered .p-orchard{grid-column:9/14;margin-top:var(--s6)}
+  .catalog.is-filtered .p-orchard .frame{aspect-ratio:4/5}
+
+  .terre .frame{grid-column:1/9}
+  .terre blockquote{grid-column:9/14}
+
+  .export-text{grid-column:1/6}
+  .steps{grid-column:7/14;margin-top:var(--s5)}
+
+  .team-text{grid-column:1/8}
+  .team-photo{grid-column:9/14;margin-top:var(--s6)}
+  .team-row{grid-template-columns:1fr 1.618fr}
+
+  .contact{padding-block:var(--s7)}
+  .contact-heading{grid-column:1/6}
+  .contact-coordinates{grid-column:7/14}
+
+  .page{padding-top:var(--s6)}
+  .page-main{grid-column:1/8}
+  .page-aside{grid-column:9/14;margin-top:var(--s7)}
+  .entry{grid-template-columns:1fr 1.618fr}
+}
+
+@media(max-width:1000px){
+  #menu{display:block}
+  .site-nav{display:none;position:absolute;top:100%;left:0;right:0;z-index:20;flex-direction:column;align-items:stretch;gap:0;padding:0 var(--gutter) var(--s3);background:var(--paper);border-bottom:1px solid var(--line)}
+  .site-nav.open{display:flex}
+  .site-nav a{padding:var(--s3) 0;border-bottom:1px solid var(--line)}
+}
+
+@media(max-width:900px){
+  .maison-photo{aspect-ratio:1.618/1;margin-top:0}
+  .page-aside .frame{aspect-ratio:4/5}
+  .page-aside .clip{max-width:340px}
+  .site-header{height:76px}
+  .brand img{width:128px}
+}
+
+@media(max-width:560px){
+  body{font-size:16px}
+  .hero-foot span{display:none}
+  .footer-top{flex-direction:column;align-items:flex-start}
+  .detail{padding:var(--s5) var(--s3) var(--s4)}
+  .refs{grid-template-columns:1fr}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
