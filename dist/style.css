@@ -316,6 +316,9 @@ figcaption{margin-top:var(--s2);font-size:13px;letter-spacing:.04em;color:var(--
 
 @media(max-width:560px){
   body{font-size:16px}
+  /* Sur téléphone, la vidéo de l'élevage prend la même largeur que la photo au-dessus. */
+  .aside-clip{width:100%;margin-left:0}
+  .page-aside .aside-clip .clip{max-width:none}
   .hero-foot span{display:none}
   .footer-top p{font-size:17px;text-align:right}
   .detail{padding:var(--s5) var(--s3) var(--s4)}
