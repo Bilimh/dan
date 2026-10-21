@@ -423,7 +423,9 @@ html:not(.motion) .marquee{overflow-x:auto}
   .motion .band-media{clip-path:circle(calc(30% + var(--open,1) * 60%) at 50% 50%)}
   .band-inner{margin-top:-90px;padding-bottom:50px}
   .engage-grid,.org,.value-grid,.project-grid,.locations{grid-template-columns:1fr}
-  .engage-disc{width:min(80%,320px)}
+  .engage{text-align:center}
+  .engage-disc{width:min(80%,320px);margin-inline:auto}
+  .engage p{margin-inline:auto}
   .team-badge{right:0}
   .footer-main{grid-template-columns:1fr}
   .footer-bottom{flex-direction:column}
