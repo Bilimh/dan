@@ -12,7 +12,6 @@ Puis ouvrir http://localhost:8000. Aucun build ni installation npm nécessaire.
 
 ## Contenu
 - dist/ : toutes les pages HTML, style.css, scripts, polices et médias.
-- dist-avant-refonte/ : l'ancienne version du site (à ne pas mettre en ligne).
 - references-design/ : sauvegarde des anciens bandeaux verts.
 
 ## Photos et mouvements
@@ -25,10 +24,10 @@ Puis ouvrir http://localhost:8000. Aucun build ni installation npm nécessaire.
 - dist/galerie.html : toutes les images, filtrables par thème, avec visionneuse plein écran.
 
 ## Principes de mise en page
-- Lignes droites, fond blanc, filets fins ; un seul aplat vert (la bande de liens du pied de page).
-- Polices hébergées dans dist/assets/fonts : Bodoni Moda (titres) et Jost (texte), licence SIL OFL.
-
-Le formulaire de contact désactivé est conservé dans dist-avant-refonte/index.html.
+- Couleurs du logo : orange mangue (#f7ae3e), vert feuille (#78ae44), anthracite (#25282b), fond crème.
+- Formes du logo : le cercle du baobab (médaillons photo) et le sillon orange (chemin d'une récolte).
+- Une seule police, Jost, hébergée dans dist/assets/fonts (licence SIL OFL).
+- L'ancienne version du site reste consultable dans l'historique git (commit aa41cb8).
 La photo de la vache a été retouchée par IA à la demande du propriétaire.
 
 ## Régénérer les pages
