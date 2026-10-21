@@ -202,8 +202,11 @@ def page(filename, title, description, body, preload=None, home=False):
     if filename != "404.html":
         PAGES.append(filename)
     else:
-        # Servie à n'importe quelle adresse : les chemins relatifs doivent partir de la racine.
-        doc = doc.replace("<head>\n", '<head>\n<base href="/">\n<meta name="robots" content="noindex">\n', 1)
+        # En ligne, cette page est servie à n'importe quelle adresse (/a/b/c) : ses chemins relatifs
+        # doivent partir de la racine du site. Ouverte comme fichier local, « / » désignerait la racine
+        # du disque : on n'ajoute donc la base que sur un vrai serveur.
+        doc = doc.replace("<head>\n", '<head>\n<meta name="robots" content="noindex">\n'
+                          '<script>if (location.protocol !== "file:") document.write(\'<base href="/">\');</script>\n', 1)
     for char, svg in ICONS.items():
         doc = doc.replace(char, svg)
     with open(os.path.join(DIST, filename), "w") as f:
@@ -658,7 +661,7 @@ NOT_FOUND = f"""<section class="wrap not-found">
   <div>
     <h1 data-words>Ce chemin <span class="hl">ne mène nulle part.</span></h1>
     <p class="lede" data-reveal>La page demandée n’existe pas ou a été déplacée.</p>
-    <a class="btn" href="/" data-reveal>Retour à l’accueil ↗</a>
+    <a class="btn" href="index.html" data-reveal>Retour à l’accueil ↗</a>
   </div>
 </section>"""
 page("404.html", "Page introuvable — Domaine Agricole de Néma", "Cette page n’existe pas.", NOT_FOUND)
