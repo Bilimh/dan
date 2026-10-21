@@ -131,7 +131,7 @@
     var y = window.scrollY;
     var vh = window.innerHeight;
     var max = root.scrollHeight - vh;
-    root.style.setProperty("--progress", (max > 0 ? y / max : 0).toFixed(4));
+    root.style.setProperty("--progress", (max > 0 ? clamp(y / max) : 0).toFixed(4));
     if (header) {
       header.classList.toggle("is-scrolled", y > 8);
       header.classList.toggle("is-hidden", y > 260 && y > lastY && !root.classList.contains("menu-open"));

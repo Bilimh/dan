@@ -17,7 +17,7 @@
 
 /* --- Base ----------------------------------------------------------------- */
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header) + 16px)}
+html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:calc(var(--header) + 16px)}
 body{margin:0;background:var(--paper);color:var(--char);font:400 18px/1.65 var(--font);-webkit-font-smoothing:antialiased;overflow-x:clip}
 img,video{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -89,9 +89,11 @@ a.frame:hover img{transform:scale(1.05)}
 .roundel-disc .slide.is-active{opacity:1}
 .motion .roundel-disc .slide{transform:scale(1.16);transition:opacity .9s ease,transform calc(var(--slide-delay,2600ms) + 900ms) linear}
 .motion .roundel-disc .slide.is-active{transform:scale(1.02)}
-.roundel-ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.roundel-ring{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}
 .roundel-ring text{font-size:8.6px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;fill:var(--char)}
-.motion .roundel-ring{animation:spin 70s linear infinite}
+/* On fait tourner le texte dans le SVG, pas le SVG : en tournant, la boîte carrée débordait de l'écran. */
+.roundel-ring text{transform-box:view-box;transform-origin:50% 50%}
+.motion .roundel-ring text{animation:spin 70s linear infinite}
 @keyframes spin{to{transform:rotate(1turn)}}
 .roundel-sun{position:absolute;bottom:-1%;left:-1%;width:15%;aspect-ratio:1;border-radius:50%;background:var(--sun);box-shadow:0 0 0 10px var(--paper)}
 .motion .roundel-sun{animation:float 7s ease-in-out infinite}
@@ -408,12 +410,14 @@ html:not(.motion) .marquee{overflow-x:auto}
   .fact--ring strong{font-size:clamp(50px,15vw,76px)}
   .fact span{font-size:12px}
   .crop-name{font-size:clamp(34px,10vw,52px)}
-  .path-line{left:4px;width:34px;right:auto}
-  .path-steps{padding-left:40px}
+  /* Sur téléphone, le sillon passe au centre, derrière les photos et les textes. */
+  .path-line{left:50%;width:40px;right:auto;transform:translateX(-50%)}
+  .path-steps{padding-left:0}
   .path-step{grid-template-columns:1fr;gap:20px}
   .path-step:nth-child(even) .path-photo{order:0}
-  .path-photo{justify-self:start;width:100%}
-  .path-copy{padding:0;box-shadow:none;background:none}
+  .path-photo{justify-self:center;width:100%}
+  .path-photo{width:88%}
+  .path-copy{justify-self:center;max-width:none;padding:18px 20px;text-align:center;box-shadow:none}
   .band{min-height:auto;display:block}
   .band-media{position:relative;height:70svh}
   .motion .band-media{clip-path:circle(calc(30% + var(--open,1) * 60%) at 50% 50%)}
@@ -425,8 +429,9 @@ html:not(.motion) .marquee{overflow-x:auto}
   .footer-bottom{flex-direction:column}
   .year{grid-template-columns:1fr;gap:20px}
   .year:nth-child(even) .year-photo{order:0}
-  .year-photo{justify-self:start;width:min(70%,320px)}
+  .year-photo{width:min(70%,320px)}
   .year-photo,.year-copy,.year:nth-child(even) .year-photo,.year:nth-child(even) .year-copy{grid-column:1;grid-row:auto;justify-self:start}
+  .year .year-photo,.year:nth-child(even) .year-photo{justify-self:center}
   .year .year-big,.year:nth-child(even) .year-big{position:absolute;margin:0;top:auto;bottom:-.08em;left:auto;right:0;transform:none;font-size:clamp(90px,28vw,150px)}
   .split{grid-template-columns:1fr}
   .split--reverse .split-copy{order:0}
