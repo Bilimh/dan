@@ -102,6 +102,9 @@ def video(name, cls=""):
 # Adresse publique du site, sans « / » final (ex. "https://www.dan.sn"). Tant qu'elle est vide,
 # les balises qui exigent une URL complète (aperçu de partage, sitemap) ne sont pas générées.
 SITE_URL = ""
+# Chemin du site sur le serveur : "/dan/" sur GitHub Pages (https://bilimh.github.io/dan/),
+# "/" une fois le nom de domaine en place. Sert à la page 404, appelée depuis n'importe quelle adresse.
+BASE_PATH = "/dan/"
 PAGES = []
 
 NAV = [
@@ -206,7 +209,7 @@ def page(filename, title, description, body, preload=None, home=False):
         # doivent partir de la racine du site. Ouverte comme fichier local, « / » désignerait la racine
         # du disque : on n'ajoute donc la base que sur un vrai serveur.
         doc = doc.replace("<head>\n", '<head>\n<meta name="robots" content="noindex">\n'
-                          '<script>if (location.protocol !== "file:") document.write(\'<base href="/">\');</script>\n', 1)
+                          f'<script>if (location.protocol !== "file:") document.write(\'<base href="{BASE_PATH}">\');</script>\n', 1)
     for char, svg in ICONS.items():
         doc = doc.replace(char, svg)
     with open(os.path.join(DIST, filename), "w") as f:

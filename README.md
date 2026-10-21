@@ -39,6 +39,11 @@ Il demande Pillow (`pip install pillow`) pour lire la taille des photos. Les ret
 directement dans dist/style.css, les animations dans dist/main.js.
 
 ## Mettre en ligne
+En attendant le nom de domaine, le site est publié sur GitHub Pages : https://bilimh.github.io/dan/
+Chaque envoi sur la branche main republie automatiquement dist/ (.github/workflows/pages.yml).
+Le jour du nom de domaine : passer BASE_PATH à "/" et renseigner SITE_URL dans build_pages.py,
+relancer le script, puis déclarer le domaine dans Settings › Pages du dépôt.
+
 Le dossier à publier est `dist/` : il est autonome (aucune compilation).
 - Avant la mise en ligne, renseigner `SITE_URL` en haut de build_pages.py (ex. "https://www.dan.sn") puis
   relancer le script : il ajoute l'aperçu de partage (réseaux sociaux), l'adresse canonique et sitemap.xml.
