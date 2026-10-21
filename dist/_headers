@@ -1,0 +1,17 @@
+# En-têtes HTTP (lus par Netlify et Cloudflare Pages ; ignorés ailleurs).
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Photos, vidéos et polices : longue mise en cache (renommer le fichier pour en changer).
+/assets/*
+  Cache-Control: public, max-age=2592000
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/style.css
+  Cache-Control: public, max-age=3600
+/main.js
+  Cache-Control: public, max-age=3600

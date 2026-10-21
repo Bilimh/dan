@@ -3,119 +3,124 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Cultiver.  Valoriser.  — Domaine Agricole de Néma</title>
-<meta name="description" content="Des productions agricoles diversifiées, avec la mangue Kent au cœur du savoir-faire.">
+<title>Nos activités — Domaine Agricole de Néma</title>
+<meta name="description" content="Mangue Kent, maraîchage, conditionnement, transformation et élevage : les activités du Domaine Agricole de Néma.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Domaine Agricole de Néma">
+<meta property="og:title" content="Nos activités — Domaine Agricole de Néma">
+<meta property="og:description" content="Mangue Kent, maraîchage, conditionnement, transformation et élevage : les activités du Domaine Agricole de Néma.">
+<meta name="theme-color" content="#f7ae3e">
 <link rel="icon" type="image/jpeg" href="assets/logo-dan.jpeg">
-<link rel="preload" href="assets/fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="assets/photos/champ-rangs.webp">
 <link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
 </head>
-<body>
-<header class="site-header wrap">
-  <a href="index.html" class="brand" aria-label="Domaine Agricole de Néma, accueil"><img src="assets/logo-dan.jpeg" alt="DAN — Domaine Agricole de Néma" width="273" height="103"></a>
-  <nav id="nav" class="site-nav" aria-label="Navigation principale">
-    <a href="a-propos.html">À propos</a>
-    <a href="activites.html" aria-current="page">Nos activités</a>
-    <a href="valeurs.html">Nos valeurs</a>
-    <a href="organisation.html">Notre organisation</a>
-    <a class="nav-contact" href="#contact">Nous contacter</a>
-  </nav>
-  <button id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
-</header>
-<main class="page wrap g13">
-  <div class="page-main">
-    <header class="page-head">
-      <p class="label">Nos activités</p>
-      <h1>Cultiver.<br><em>Valoriser.</em></h1>
-      <p class="lede">Des productions agricoles diversifiées, avec la mangue Kent au cœur du savoir-faire.</p>
-    </header>
-    <section class="entry">
-      <h2>Arboriculture &amp; mangue Kent.</h2>
-      <div class="entry-body">
-        <p>Le domaine cultive des manguiers de variété Kent, réputée pour sa chair douce et juteuse. Son implantation bénéficie d’un ensoleillement et d’une pluviométrie adaptés, favorables à une production abondante et régulière.</p>
-        <p>Les récoltes commencent dès mi-mai. Cette précocité constitue un avantage pour les marchés d’exportation. Le calendrier et les disponibilités sont précisés pour chaque campagne.</p>
-      </div>
-    </section>
-    <section class="entry">
-      <div class="entry-side">
-        <h2>Maraîchage &amp; productions complémentaires.</h2>
-        <p>Le maraîchage, l’apiculture, l’élevage et la pisciculture complètent l’arboriculture du domaine. Des responsables spécialisés accompagnent ces activités.</p>
-      </div>
-      <div class="entry-body">
-        <figure class="frame photo photo-champ"><img src="assets/travail-au-champ.webp" alt="Travail dans les rangées de cultures du domaine" width="564" height="1000" loading="lazy"></figure>
-      </div>
-    </section>
-    <section class="entry">
-      <h2>Transformation &amp; distribution.</h2>
-      <div class="entry-body">
-        <p>La transformation permet de valoriser les productions du domaine. Un réseau de distribution bien établi dessert le Sénégal, l’Europe et l’Afrique pour assurer un approvisionnement régulier de ces marchés en mangues.</p>
-      </div>
-    </section>
-    <section class="entry">
-      <div class="entry-side">
-        <h2>La récolte du maïs.</h2>
-        <p>La culture du maïs complète les productions du domaine.</p>
-      </div>
-      <div class="entry-body">
-        <figure>
-          <div class="frame photo"><img src="assets/mais_culture.jpeg" alt="Épis de maïs récoltés, étalés pour le séchage au domaine" width="564" height="1000" loading="lazy"></div>
-          <figcaption>Les épis de maïs après la récolte.</figcaption>
-        </figure>
-      </div>
-    </section>
-    <section id="projets" class="entry">
-      <h2>Les prochaines étapes.</h2>
-      <div class="entry-body">
-        <p><strong>Expansion de la production.</strong> Le domaine envisage d’étendre ses surfaces cultivées et d’introduire de nouvelles variétés de mangues pour diversifier son offre et répondre à la demande croissante des marchés locaux et internationaux.</p>
-        <p><strong>Innovation technologique.</strong> Le domaine investit dans les technologies pour améliorer ses pratiques agricoles et son efficacité. Ses orientations comprennent l’utilisation de drones pour la surveillance des cultures et les traitements phytosanitaires, ainsi que l’analyse de données pour optimiser les rendements.</p>
-        <p><strong>Formation et développement des compétences.</strong> Des programmes sont prévus pour le personnel et les agriculteurs locaux, afin de partager les savoir-faire et les meilleures pratiques de la région.</p>
-      </div>
-    </section>
-    <a class="link back" href="index.html">Revenir à l’accueil</a>
+<body class="inner">
+<a class="skip" href="#contenu">Aller au contenu</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="brand" aria-label="Domaine Agricole de Néma, accueil"><img src="assets/logo-dan.jpeg" alt="" width="273" height="103"></a>
+    <nav id="nav" class="site-nav" aria-label="Navigation principale"><a href="a-propos.html">Le domaine</a><a href="activites.html" aria-current="page">Nos activités</a><a href="valeurs.html">Nos engagements</a><a href="organisation.html">Les équipes</a><a href="galerie.html">En images</a><a class="nav-contact" href="#contact">Contact</a></nav>
+    <button id="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
   </div>
-  <aside class="page-aside">
-    <figure>
-      <div class="frame clip-frame"><img src="assets/mangues.webp" alt="Mangues Kent du domaine" width="720" height="1280"></div>
-      <figcaption>Les mangues Kent du domaine.</figcaption>
-    </figure>
-    <h2>Votre approvisionnement.</h2>
-    <p>Produit, volume, destination et calendrier : échangez avec le domaine pour préciser vos besoins et les conditions de disponibilité.</p>
-    <a class="cta" href="#contact">Contacter le domaine</a>
-    <section class="aside-entry">
-      <h2>L’élevage au quotidien.</h2>
-      <figure class="frame photo-square photo-elevage"><img src="assets/elevage.webp" alt="Une vache et son veau au domaine" width="941" height="1670" loading="lazy"></figure>
-      <figure class="aside-clip">
-        <video class="clip" controls playsinline preload="none" poster="assets/elevage-poster.webp" aria-label="Vidéo du suivi d’un veau">
-          <source src="assets/elevage.mp4" type="video/mp4">Votre navigateur ne permet pas la lecture de cette vidéo. <a href="assets/elevage.mp4">Ouvrir la vidéo</a>.</video>
-        <figcaption>Un aperçu de l’activité d’élevage.</figcaption>
-      </figure>
-    </section>
-  </aside>
+</header>
+<main id="contenu">
+<section class="page-hero wrap">
+  <div class="page-hero-copy">
+    <h1 data-words>Cultiver.<br><span class="hl">Valoriser.</span></h1>
+    <p class="lede" data-reveal>Du verger à la transformation, des productions agricoles reliées aux marchés.</p>
+  </div>
+  <div class="roundel hero-roundel" data-slides="2600">
+  <div class="roundel-disc"><img class="slide" data-slide data-label="Rangs de cultures irriguées au goutte-à-goutte" src="assets/photos/champ-rangs.webp" width="1000" height="522" alt="Rangs de cultures irriguées au goutte-à-goutte" fetchpriority="high" style="object-position:center 60%"><img class="slide" data-slide data-label="Mangues Kent conditionnées en cartons" src="assets/photos/mangues-cartons.webp" width="720" height="1280" alt="Mangues Kent conditionnées en cartons" loading="lazy" decoding="async" style="object-position:center"><img class="slide" data-slide data-label="Sacs d’oignons rouges au champ" src="assets/photos/oignons-champ.webp" width="1080" height="810" alt="Sacs d’oignons rouges au champ" loading="lazy" decoding="async" style="object-position:center"></div>
+  <svg class="roundel-ring" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ring-hero-roundel" d="M100,100 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/></defs><text textLength="548" lengthAdjust="spacing"><textPath href="#ring-hero-roundel" textLength="548" lengthAdjust="spacing">Domaine Agricole de Néma · Cultiver · Transformer · Transmettre · </textPath></text></svg>
+  <span class="roundel-sun" aria-hidden="true"></span>
+  <div class="roundel-dots"><button type="button" class="dot" data-bar aria-label="Photo 1 sur 3"><span></span></button><button type="button" class="dot" data-bar aria-label="Photo 2 sur 3"><span></span></button><button type="button" class="dot" data-bar aria-label="Photo 3 sur 3"><span></span></button></div>
+  <p class="roundel-caption" data-caption aria-live="polite"></p>
+</div>
+</section>
+
+<section id="mangue" class="wrap split">
+  <div class="duo" data-lightbox-group><figure class="duo-a" data-reveal><a class="frame" href="assets/photos/verger-mangues.webp" data-lightbox data-caption="Au verger, les mangues prennent forme." data-alt="Jeunes mangues Kent sur un manguier du domaine" aria-label="Agrandir : Au verger, les mangues prennent forme."><img src="assets/photos/verger-mangues.webp" width="564" height="925" alt="Jeunes mangues Kent sur un manguier du domaine" loading="lazy" decoding="async"></a><figcaption>Au verger, les mangues prennent forme.</figcaption></figure><figure class="duo-b" data-reveal><a class="frame" href="assets/photos/mangues-cartons.webp" data-lightbox data-caption="Mangues Kent en cartons, prêtes à partir." data-alt="Mangues Kent conditionnées en cartons" aria-label="Agrandir : Mangues Kent en cartons, prêtes à partir."><img src="assets/photos/mangues-cartons.webp" srcset="assets/photos/mangues-cartons-640.webp 640w, assets/photos/mangues-cartons.webp 720w" sizes="(max-width: 700px) 60vw, 20vw" width="720" height="1280" alt="Mangues Kent conditionnées en cartons" loading="lazy" decoding="async"></a><figcaption>Mangues Kent en cartons, prêtes à partir.</figcaption></figure></div>
+  <div class="split-copy">
+    <p class="kicker" data-reveal>Au cœur du verger</p>
+    <h2 data-words>La mangue <span class="hl">Kent.</span></h2>
+    <p data-reveal>Plantés à partir des années 2000, les manguiers Kent occupent une place centrale dans les productions du domaine. La variété est appréciée pour sa chair douce et juteuse.</p>
+    <p data-reveal>L’ensoleillement et la pluviométrie de la zone favorisent la production. La précocité des récoltes permet d’envisager les premières disponibilités à l’export dès la mi-mai ; volumes et calendrier se précisent pour chaque campagne.</p>
+  </div>
+</section>
+
+<section id="cultures" class="wrap chapter">
+  <div class="section-head"><div><p class="kicker" data-reveal>Productions complémentaires</p><h2 data-words>Faire vivre <span class="hl">la diversité.</span></h2></div><p data-reveal>Le maraîchage et d’autres cultures complètent l’arboriculture. Les productions mentionnées par le domaine comprennent notamment les oignons et le maïs.</p></div>
+  <div class="crops" data-lightbox-group>
+    <figure class="c-wide" data-reveal><a class="frame" href="assets/photos/oignons-champ.webp" data-lightbox data-caption="Récolte d’oignons au champ." data-alt="Sacs d’oignons rouges au champ" aria-label="Agrandir : Récolte d’oignons au champ."><img src="assets/photos/oignons-champ.webp" srcset="assets/photos/oignons-champ-640.webp 640w, assets/photos/oignons-champ.webp 1080w" sizes="(max-width: 700px) 100vw, 46vw" width="1080" height="810" alt="Sacs d’oignons rouges au champ" loading="lazy" decoding="async"></a><figcaption>Récolte d’oignons au champ.</figcaption></figure>
+    <figure class="c-video" data-reveal><video class="" data-autoplay muted loop playsinline preload="none" poster="assets/photos/piments-poster.webp" aria-label="Plants de piments au domaine"><source src="assets/photos/piments.mp4" type="video/mp4"></video><figcaption>Les piments, au champ.</figcaption></figure>
+    <figure class="c-tall" data-reveal><a class="frame" href="assets/photos/mais-sechage.webp" data-lightbox data-caption="Le maïs mis à sécher." data-alt="Épis de maïs mis à sécher" aria-label="Agrandir : Le maïs mis à sécher."><img src="assets/photos/mais-sechage.webp" width="564" height="925" alt="Épis de maïs mis à sécher" loading="lazy" decoding="async"></a><figcaption>Le maïs mis à sécher.</figcaption></figure>
+    <figure class="c-wide2" data-reveal><a class="frame" href="assets/photos/courge-coupe.webp" data-lightbox data-caption="Des courges fraîchement coupées." data-alt="Courges butternut fraîchement coupées" aria-label="Agrandir : Des courges fraîchement coupées."><img src="assets/photos/courge-coupe.webp" srcset="assets/photos/courge-coupe-640.webp 640w, assets/photos/courge-coupe.webp 1000w" sizes="(max-width: 700px) 100vw, 46vw" width="1000" height="522" alt="Courges butternut fraîchement coupées" loading="lazy" decoding="async"></a><figcaption>Des courges fraîchement coupées.</figcaption></figure>
+    <figure class="c-small" data-reveal><a class="frame" href="assets/photos/mais-sacs.webp" data-lightbox data-caption="Le maïs égrené, en sacs." data-alt="Sacs de maïs égrené" aria-label="Agrandir : Le maïs égrené, en sacs."><img src="assets/photos/mais-sacs.webp" srcset="assets/photos/mais-sacs-640.webp 640w, assets/photos/mais-sacs.webp 1000w" sizes="(max-width: 700px) 100vw, 24vw" width="1000" height="522" alt="Sacs de maïs égrené" loading="lazy" decoding="async"></a><figcaption>Le maïs égrené, en sacs.</figcaption></figure>
+  </div>
+</section>
+
+<section class="band" data-panel>
+  <div class="band-media"><img src="assets/photos/pepiniere-plaques.webp" srcset="assets/photos/pepiniere-plaques-640.webp 640w, assets/photos/pepiniere-plaques.webp 1000w" sizes="100vw" width="1000" height="522" alt="Préparation des plaques de semis à la pépinière" loading="lazy" decoding="async" style="object-position:center"></div>
+  <div class="wrap band-inner"><div class="band-card" data-reveal><h2>Préparer. Transformer.</h2><p>Le soin apporté à chaque étape, de la pépinière à la station de conditionnement.</p></div></div>
+</section>
+
+<section id="valorisation" class="wrap chapter">
+  <div class="section-head"><div><p class="kicker" data-reveal>Conditionnement &amp; transformation</p><h2 data-words>Des stations <span class="hl">aux marchés.</span></h2></div>
+    <div data-reveal><p>Depuis la première station de conditionnement construite à Noflaye, DAN a développé ses équipements pour accompagner la commercialisation des récoltes. Un second site a été construit à Kibik.</p><p>Entre 2020 et 2022, le domaine a construit une usine de transformation de mangues et de produits dérivés ainsi qu’un centre de conditionnement doté d’une chambre froide d’une capacité de quatre conteneurs.</p></div>
+  </div>
+  <div class="trio" data-lightbox-group>
+    <figure class="" data-reveal><a class="frame" href="assets/photos/conditionnement-chaine.webp" data-lightbox data-caption="La chaîne de conditionnement." data-alt="La chaîne de conditionnement des mangues" aria-label="Agrandir : La chaîne de conditionnement."><img src="assets/photos/conditionnement-chaine.webp" width="564" height="925" alt="La chaîne de conditionnement des mangues" loading="lazy" decoding="async"></a><figcaption>La chaîne de conditionnement.</figcaption></figure>
+    <figure class="" data-reveal><a class="frame" href="assets/photos/conditionnement-tri.webp" data-lightbox data-caption="Le contrôle des fruits sur la ligne de tri." data-alt="Contrôle des mangues sur la ligne de tri" aria-label="Agrandir : Le contrôle des fruits sur la ligne de tri."><img src="assets/photos/conditionnement-tri.webp" width="540" height="960" alt="Contrôle des mangues sur la ligne de tri" loading="lazy" decoding="async"></a><figcaption>Le contrôle des fruits sur la ligne de tri.</figcaption></figure>
+    <figure class="" data-reveal><a class="frame" href="assets/photos/oignons-conteneur.webp" data-lightbox data-caption="Les oignons chargés en conteneur." data-alt="Oignons chargés dans un conteneur" aria-label="Agrandir : Les oignons chargés en conteneur."><img src="assets/photos/oignons-conteneur.webp" srcset="assets/photos/oignons-conteneur-640.webp 640w, assets/photos/oignons-conteneur.webp 960w" sizes="(max-width: 700px) 100vw, 33vw" width="960" height="1280" alt="Oignons chargés dans un conteneur" loading="lazy" decoding="async"></a><figcaption>Les oignons chargés en conteneur.</figcaption></figure>
+  </div>
+  <div data-lightbox-group><figure class="wide-photo" data-reveal><a class="frame" href="assets/photos/chargement-camion.webp" data-lightbox data-caption="Au départ du domaine, la récolte prend la route." data-alt="Chargement d’un camion au départ du domaine" aria-label="Agrandir : Au départ du domaine, la récolte prend la route."><img src="assets/photos/chargement-camion.webp" srcset="assets/photos/chargement-camion-640.webp 640w, assets/photos/chargement-camion.webp 1000w" sizes="100vw" width="1000" height="522" alt="Chargement d’un camion au départ du domaine" loading="lazy" decoding="async"></a><figcaption>Au départ du domaine, la récolte prend la route.</figcaption></figure></div>
+</section>
+
+<section id="diversification" class="wrap split split--reverse">
+  <div class="duo" data-lightbox-group><figure class="duo-a" data-reveal><video class="" data-autoplay muted loop playsinline preload="none" poster="assets/photos/elevage-poster.webp" aria-label="Soins à un veau, à l’élevage du domaine"><source src="assets/photos/elevage.mp4" type="video/mp4"></video><figcaption>Un aperçu de l’activité d’élevage.</figcaption></figure><figure class="duo-b" data-reveal><a class="frame" href="assets/photos/elevage-vache.webp" data-lightbox data-caption="Une vache et son veau au domaine." data-alt="Une vache et son veau au domaine" aria-label="Agrandir : Une vache et son veau au domaine."><img src="assets/photos/elevage-vache.webp" srcset="assets/photos/elevage-vache-640.webp 640w, assets/photos/elevage-vache.webp 941w" sizes="(max-width: 700px) 60vw, 20vw" width="941" height="1545" alt="Une vache et son veau au domaine" loading="lazy" decoding="async"></a><figcaption>Une vache et son veau au domaine.</figcaption></figure></div>
+  <div class="split-copy">
+    <p class="kicker" data-reveal>Des métiers complémentaires</p>
+    <h2 data-words>Élargir <span class="hl">les savoir-faire.</span></h2>
+    <p data-reveal>L’arboriculture et le maraîchage s’inscrivent dans une activité agricole plus large. Les équipes du domaine couvrent également l’apiculture, l’élevage, la pisciculture et la transformation.</p>
+    <p data-reveal>Ces fonctions spécialisées sont portées par des responsables de production animale, d’apiculture, de pisciculture et de transformation.</p>
+  </div>
+</section>
+
+<section id="projets" class="wrap chapter projects">
+  <div class="section-head"><div><p class="kicker" data-reveal>Les prochaines étapes</p><h2 data-words>Continuer <span class="hl">à grandir.</span></h2></div></div>
+  <div class="project-grid">
+    <article class="project" data-reveal><span class="project-dot" aria-hidden="true"></span><h3>Diversifier</h3><p>Étendre et diversifier les productions, notamment par l’introduction de nouvelles variétés de mangues et d’autres cultures maraîchères.</p></article>
+    <article class="project" data-reveal><span class="project-dot" aria-hidden="true"></span><h3>Innover</h3><p>Des outils de surveillance des cultures et d’analyse des données, avec des pistes comme les drones.</p></article>
+    <article class="project" data-reveal><span class="project-dot" aria-hidden="true"></span><h3>Former</h3><p>Des formations pour le personnel et les agriculteurs locaux.</p></article>
+    <article class="project" data-reveal><span class="project-dot" aria-hidden="true"></span><h3>Construire</h3><p>Depuis 2025, un nouveau centre de conditionnement est en construction dans la commune de Nguéniène, vers Fadial.</p></article>
+  </div>
+</section>
 </main>
 <footer id="contact" class="site-footer">
-<div class="wrap">
-  <div class="footer-top">
-    <a class="brand" href="index.html"><img src="assets/logo-dan.jpeg" alt="DAN — Domaine Agricole de Néma" width="273" height="103"></a>
-    <p>La terre. Et au-delà.</p>
+  <div class="wrap">
+    <div class="footer-main">
+      <h2 data-words>Parlons de vos <span class="hl">projets agricoles.</span></h2>
+      <div class="footer-contact" data-reveal>
+        <a class="footer-cta" href="mailto:contact@dan.sn" data-magnet>Écrire au domaine <span aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+        <a href="tel:+221338898712">+221 33 889 87 12</a>
+        <a href="mailto:contact@dan.sn">contact@dan.sn</a>
+        <span>1, rue Ramez Bourgi · Sénégal</span>
+      </div>
+    </div>
+    <nav class="footer-links" aria-label="Navigation de pied de page"><a href="a-propos.html">Le domaine</a><a href="activites.html">Nos activités</a><a href="valeurs.html">Nos engagements</a><a href="organisation.html">Les équipes</a><a href="galerie.html">En images</a></nav>
+    <div class="footer-bottom"><span>© 2026 Domaine Agricole de Néma</span><span>La terre nous réunit.</span></div>
+    <p class="legal-line">SA au capital de 150 000 000 FCFA · NINEA : 005136909 · RCCM : SN DKR 14431</p>
   </div>
-</div>
-<div class="footer-band">
-<div class="wrap">
-  <div class="footer-links">
-    <a href="a-propos.html">À propos</a>
-    <a href="activites.html">Nos activités</a>
-    <a href="valeurs.html">Nos valeurs</a>
-    <a href="organisation.html">Notre organisation</a>
-    <a href="tel:+221338898712">+221 33 889 87 12</a>
-    <a href="mailto:contact@dan.sn">contact@dan.sn</a>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Domaine Agricole de Néma</span>
-    <span>1, rue Ramez Bourgi</span>
-  </div>
-  <p class="legal-line">SA au capital de 150 000 000 FCFA · NINEA : 005136909 · RCCM : SN DKR 14431</p>
-</div>
-</div>
 </footer>
-<script>const menu=document.querySelector('#menu'),nav=document.querySelector('#nav');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Fermer':'Menu'});</script>
+<dialog id="lightbox" class="lightbox" aria-label="Visionneuse d’images">
+  <button class="lb-close" type="button" data-lb-close>Fermer</button>
+  <figure><img data-lb-img alt=""><figcaption><span data-lb-caption></span><span data-lb-count></span></figcaption></figure>
+  <button class="lb-btn lb-prev" type="button" data-lb-prev aria-label="Image précédente"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+  <button class="lb-btn lb-next" type="button" data-lb-next aria-label="Image suivante"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+</dialog>
 </body>
 </html>

@@ -3,301 +3,187 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Domaine Agricole de Néma — Agriculture, transformation &amp; export</title>
-<meta name="description" content="Depuis 1996 à Fatick, au Sénégal : mangue Kent, agriculture, transformation et exportation. Découvrez le Domaine Agricole de Néma.">
+<title>Domaine Agricole de Néma — Cultiver, transformer, transmettre</title>
+<meta name="description" content="Depuis 1996, le Domaine Agricole de Néma associe production agricole, conditionnement, transformation et commercialisation au Sénégal.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Domaine Agricole de Néma">
+<meta property="og:title" content="Domaine Agricole de Néma — Cultiver, transformer, transmettre">
+<meta property="og:description" content="Depuis 1996, le Domaine Agricole de Néma associe production agricole, conditionnement, transformation et commercialisation au Sénégal.">
+<meta name="theme-color" content="#f7ae3e">
 <link rel="icon" type="image/jpeg" href="assets/logo-dan.jpeg">
-<link rel="preload" href="assets/fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="assets/photos/champ-aigrettes.webp">
 <link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
 </head>
-<body>
-<header class="site-header wrap">
-  <a href="index.html" class="brand" aria-label="Domaine Agricole de Néma, accueil"><img src="assets/logo-dan.jpeg" alt="DAN — Domaine Agricole de Néma" width="273" height="103"></a>
-  <nav id="nav" class="site-nav" aria-label="Navigation principale">
-    <a href="a-propos.html">À propos</a>
-    <a href="activites.html">Nos activités</a>
-    <a href="valeurs.html">Nos valeurs</a>
-    <a href="organisation.html">Notre organisation</a>
-    <a class="nav-contact" href="#contact">Nous contacter</a>
-  </nav>
-  <button id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+<body class="home">
+<a class="skip" href="#contenu">Aller au contenu</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="brand" aria-label="Domaine Agricole de Néma, accueil"><img src="assets/logo-dan.jpeg" alt="" width="273" height="103"></a>
+    <nav id="nav" class="site-nav" aria-label="Navigation principale"><a href="a-propos.html">Le domaine</a><a href="activites.html">Nos activités</a><a href="valeurs.html">Nos engagements</a><a href="organisation.html">Les équipes</a><a href="galerie.html">En images</a><a class="nav-contact" href="#contact">Contact</a></nav>
+    <button id="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
 </header>
-<main>
-
-<section class="hero wrap g13">
-  <div class="hero-text">
-    <p class="label">Domaine Agricole de Néma / Sénégal</p>
-    <h1>La terre.<br><em>Et au-delà.</em></h1>
-    <p class="lede">Depuis 1996, cultiver, transformer et exporter au cœur du Sénégal.</p>
-    <a class="cta" href="#produits">Nos produits</a>
-  </div>
-  <!-- Diaporama : les deux cadres changent par paires, en fondu (voir le script en bas de page). -->
-  <figure class="hero-main frame slideshow">
-    <img class="is-on" src="assets/parcelle.webp" alt="Parcelle cultivée du Domaine Agricole de Néma" width="564" height="1000" fetchpriority="high">
-    <img data-src="assets/slide1.jpeg" alt="Jeunes plants sous abri au domaine" width="564" height="1000" style="object-position:center 30%">
-    <img data-src="assets/slide6.jpeg" alt="Mise en sacs du maïs après la récolte" width="564" height="1000" style="object-position:center 35%">
-    <img data-src="assets/slide8.jpeg" alt="Filets d’oignons chargés pour l’expédition" width="960" height="1280" style="object-position:center 40%">
-  </figure>
-  <figure class="hero-inset frame slideshow">
-    <img class="is-on" src="assets/mangues-sur-arbre.webp" alt="" width="564" height="1000">
-    <img data-src="assets/slide5.jpeg" alt="" width="1000" height="564">
-    <img data-src="assets/slide7.jpeg" alt="" width="1000" height="564">
-    <img data-src="assets/slide2.jpeg" alt="" width="1000" height="564">
-  </figure>
-  <div class="hero-foot">
-    <a href="#maison">Découvrir Néma</a>
-    <span>Vente · Transformation · Exportation</span>
-  </div>
-</section>
-
-<section id="maison" class="section maison wrap g13">
-  <figure class="maison-photo frame reveal"><img src="assets/mangues.webp" alt="Mangues Kent récoltées, rangées en cartons" width="720" height="1280" loading="lazy"></figure>
-  <div class="maison-text reveal">
-    <p class="label">Notre maison</p>
-    <h2>Une récolte.<br><em>Mille possibles.</em></h2>
-    <p>À Fatick, le Domaine Agricole de Néma cultive la mangue Kent et développe des activités agricoles, de transformation et d’exportation.</p>
-    <ul class="facts">
-      <li>Depuis 1996</li>
-      <li>Fatick, Sénégal</li>
-      <li>Mangue Kent</li>
-    </ul>
-    <a class="link" href="a-propos.html">Découvrir le domaine</a>
-    <div class="quality">
-      <h3>Qualité, traçabilité &amp; certifications</h3>
-      <p>GLOBALG.A.P. · SMETA · Tesco Nurture · GRASP</p>
-      <a class="link" href="valeurs.html#certifications">Nos engagements qualité</a>
+<main id="contenu">
+<section class="hero wrap" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <h1 id="hero-title" data-words>La terre<br>nous <span class="hl hl--draw">réunit.</span></h1>
+    <p class="lede" data-reveal>Du verger aux marchés, une histoire agricole portée par les femmes et les hommes de Néma.</p>
+    <div class="hero-actions" data-reveal>
+      <a class="btn" href="#domaine" data-magnet>Entrer dans le domaine <span aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a>
+      <a class="link" href="galerie.html">Le domaine en images <span aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
     </div>
   </div>
-  <figure class="maison-side frame reveal"><img src="assets/mais_culture.jpeg" alt="Épis de maïs récoltés, étalés pour le séchage" width="564" height="1000" loading="lazy"></figure>
+  <div class="roundel hero-roundel" data-slides="2600">
+  <div class="roundel-disc"><img class="slide" data-slide data-label="Aigrettes au-dessus d’une parcelle fraîchement plantée" src="assets/photos/champ-aigrettes.webp" width="1000" height="522" alt="Aigrettes au-dessus d’une parcelle fraîchement plantée" fetchpriority="high" style="object-position:40% 50%"><img class="slide" data-slide data-label="Jeunes mangues Kent sur un manguier du domaine" src="assets/photos/verger-mangues.webp" width="564" height="925" alt="Jeunes mangues Kent sur un manguier du domaine" loading="lazy" decoding="async" style="object-position:center 40%"><img class="slide" data-slide data-label="Une équipe de récolte devant les caisses remplies" src="assets/photos/recolte-caisses.webp" width="540" height="960" alt="Une équipe de récolte devant les caisses remplies" loading="lazy" decoding="async" style="object-position:center 35%"><img class="slide" data-slide data-label="Rangs de cultures irriguées au goutte-à-goutte" src="assets/photos/champ-rangs.webp" width="1000" height="522" alt="Rangs de cultures irriguées au goutte-à-goutte" loading="lazy" decoding="async" style="object-position:center 60%"><img class="slide" data-slide data-label="La chaîne de conditionnement des mangues" src="assets/photos/conditionnement-chaine.webp" width="564" height="925" alt="La chaîne de conditionnement des mangues" loading="lazy" decoding="async" style="object-position:center 40%"></div>
+  <svg class="roundel-ring" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ring-hero-roundel" d="M100,100 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/></defs><text textLength="548" lengthAdjust="spacing"><textPath href="#ring-hero-roundel" textLength="548" lengthAdjust="spacing">Domaine Agricole de Néma · Cultiver · Transformer · Transmettre · </textPath></text></svg>
+  <span class="roundel-sun" aria-hidden="true"></span>
+  <div class="roundel-dots"><button type="button" class="dot" data-bar aria-label="Photo 1 sur 5"><span></span></button><button type="button" class="dot" data-bar aria-label="Photo 2 sur 5"><span></span></button><button type="button" class="dot" data-bar aria-label="Photo 3 sur 5"><span></span></button><button type="button" class="dot" data-bar aria-label="Photo 4 sur 5"><span></span></button><button type="button" class="dot" data-bar aria-label="Photo 5 sur 5"><span></span></button></div>
+  <p class="roundel-caption" data-caption aria-live="polite"></p>
+</div>
 </section>
 
-<section id="metiers" class="section section-tight metiers wrap">
-  <div class="section-head reveal">
-    <h2>Du brut.<br><em>À la valeur.</em></h2>
-    <p>Vendre. Transformer. Exporter.</p>
-  </div>
-  <div class="g13">
-    <article class="metier reveal">
-      <p class="label">Sélectionner</p>
-      <h3>Vente &amp; distribution</h3>
-      <p>Mangue Kent et productions du domaine, pour les marchés locaux et internationaux.</p>
-      <ul>
-        <li>Produits bruts</li>
-        <li>Approvisionnement</li>
-        <li>Conditionnement adapté</li>
-      </ul>
-    </article>
-    <article class="metier reveal">
-      <p class="label">Transformer</p>
-      <h3>Transformation</h3>
-      <p>Valoriser les récoltes au plus près de leur origine.</p>
-      <ul>
-        <li>Transformation des récoltes</li>
-        <li>Savoir-faire local</li>
-        <li>Valorisation des productions</li>
-      </ul>
-    </article>
-    <article class="metier reveal">
-      <p class="label">Exporter</p>
-      <h3>Exportation</h3>
-      <p>Des débouchés au Sénégal, en Europe et en Afrique.</p>
-      <ul>
-        <li>Spécifications produits</li>
-        <li>Préparation des commandes</li>
-        <li>Coordination logistique</li>
-      </ul>
-    </article>
-  </div>
+<section class="facts" aria-label="Le domaine en chiffres">
+  <ul class="wrap facts-row">
+    <li class="fact fact--sun" data-reveal><strong data-count="1996" data-raw="1">1996</strong><span>Création du domaine par Alioune Ndour Diouf</span></li>
+    <li class="fact fact--leaf" data-reveal><strong data-count="19">19</strong><span>salariés permanents</span></li>
+    <li class="fact fact--char" data-reveal><strong data-count="150">150</strong><span>saisonniers par jour au plus fort des récoltes</span></li>
+    <li class="fact fact--ring" data-reveal><strong data-count="4">4</strong><span>conteneurs en chambre froide</span></li>
+  </ul>
 </section>
 
-<section id="produits" class="section section-tight produits wrap">
-  <div class="section-head reveal">
-    <div>
-      <p class="label">Notre sélection</p>
-      <h2>Nos terres.<br><em>Leurs richesses.</em></h2>
+<section class="intro wrap" id="domaine" aria-labelledby="intro-title">
+  <div class="intro-side">
+    <p class="kicker" data-reveal>Le Domaine Agricole de Néma</p>
+    <h2 class="intro-title" id="intro-title" data-words>Une histoire<br>qui prend racine.</h2>
+    <dl class="intro-people" data-reveal>
+      <div><dt>Fondateur</dt><dd>Alioune Ndour Diouf</dd></div>
+      <div><dt>Directrice depuis 2014</dt><dd>Aminata Dominique Diouf</dd></div>
+    </dl>
+    <a class="link" href="a-propos.html" data-reveal>L’histoire du domaine <span aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+  </div>
+  <p class="intro-text" data-reveal>Né vers 1996 d’une passion pour la terre <span class="pill" aria-hidden="true"><img src="assets/photos/champ-horizon-640.webp" alt="" loading="lazy" style="object-position:center 70%"></span> le domaine a d’abord été <b>un maraîchage</b>. Puis sont venus <b>les manguiers Kent</b> <span class="pill" aria-hidden="true"><img src="assets/photos/verger-mangues.webp" alt="" loading="lazy" style="object-position:center"></span> les <b>stations de conditionnement</b> <span class="pill" aria-hidden="true"><img src="assets/photos/conditionnement-tri.webp" alt="" loading="lazy" style="object-position:center"></span> et <b>l’usine de transformation</b>. Aujourd’hui, ses récoltes <span class="pill" aria-hidden="true"><img src="assets/photos/oignons-conteneur-640.webp" alt="" loading="lazy" style="object-position:center"></span> voyagent du Sénégal jusqu’en <b>Europe et en Afrique</b>.</p>
+</section>
+
+<section class="crops-section" aria-labelledby="crops-title">
+  <div class="wrap crops-grid">
+    <div class="crops-head">
+      <p class="kicker" data-reveal>Nos productions</p>
+      <h2 id="crops-title" data-words>Ce qui pousse<br>à Néma.</h2>
+      <p data-reveal>De l’arboriculture au maraîchage, de l’élevage à l’apiculture et à la pisciculture : des métiers complémentaires, encadrés par des responsables spécialisés.</p>
+      <a class="link link--dark" href="activites.html" data-reveal>Toutes nos activités <span aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
     </div>
-    <div class="filters" role="group" aria-label="Filtrer les produits">
-      <button class="filter" data-filter="all" aria-pressed="true">Toute la sélection</button>
-      <button class="filter" data-filter="fruit" aria-pressed="false">Mangue</button>
-      <button class="filter" data-filter="seed" aria-pressed="false">Cultures &amp; maraîchage</button>
-      <button class="filter" data-filter="plant" aria-pressed="false">Élevage &amp; pisciculture</button>
-    </div>
+    <ul class="crop-list" data-preview-list><li><a class="crop" href="activites.html#mangue" data-preview="assets/photos/verger-mangues.webp"><span class="crop-thumb"><img src="assets/photos/verger-mangues.webp" width="564" height="925" alt="" loading="lazy" decoding="async"></span><span class="crop-name">Mangue Kent</span><span class="crop-go" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li><li><a class="crop" href="activites.html#cultures" data-preview="assets/photos/oignons-champ.webp"><span class="crop-thumb"><img src="assets/photos/oignons-champ.webp" srcset="assets/photos/oignons-champ-640.webp 640w, assets/photos/oignons-champ.webp 1080w" sizes="120px" width="1080" height="810" alt="" loading="lazy" decoding="async"></span><span class="crop-name">Oignon</span><span class="crop-go" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li><li><a class="crop" href="activites.html#cultures" data-preview="assets/photos/mais-sechage.webp"><span class="crop-thumb"><img src="assets/photos/mais-sechage.webp" width="564" height="925" alt="" loading="lazy" decoding="async"></span><span class="crop-name">Maïs</span><span class="crop-go" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li><li><a class="crop" href="activites.html#cultures" data-preview="assets/photos/champ-piments.webp"><span class="crop-thumb"><img src="assets/photos/champ-piments.webp" srcset="assets/photos/champ-piments-640.webp 640w, assets/photos/champ-piments.webp 1000w" sizes="120px" width="1000" height="522" alt="" loading="lazy" decoding="async"></span><span class="crop-name">Piment</span><span class="crop-go" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li><li><a class="crop" href="activites.html#cultures" data-preview="assets/photos/courge-butternut.webp"><span class="crop-thumb"><img src="assets/photos/courge-butternut.webp" width="564" height="925" alt="" loading="lazy" decoding="async"></span><span class="crop-name">Courge</span><span class="crop-go" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li><li><a class="crop" href="activites.html#diversification" data-preview="assets/photos/elevage-vache.webp"><span class="crop-thumb"><img src="assets/photos/elevage-vache.webp" srcset="assets/photos/elevage-vache-640.webp 640w, assets/photos/elevage-vache.webp 941w" sizes="120px" width="941" height="1545" alt="" loading="lazy" decoding="async"></span><span class="crop-name">Élevage</span><span class="crop-go" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li><li><a class="crop" href="activites.html#diversification"><span class="crop-thumb crop-thumb--empty"></span><span class="crop-name">Apiculture</span><span class="crop-go" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li><li><a class="crop" href="activites.html#diversification"><span class="crop-thumb crop-thumb--empty"></span><span class="crop-name">Pisciculture</span><span class="crop-go" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li></ul>
   </div>
-  <div class="catalog g13">
-    <article class="product p-fruit reveal" data-category="fruit">
-      <div class="frame"><img src="assets/mangues.webp" alt="Mangues conditionnées en cartons au domaine" width="720" height="1280" loading="lazy"></div>
-      <h3>Mangue Kent</h3>
-      <p>Une chair douce et juteuse.</p>
-      <button class="link" data-product="Mangue Kent">Découvrir</button>
+  <div class="crop-preview" data-preview-box aria-hidden="true"><img alt=""></div>
+</section>
+
+<section class="path" aria-labelledby="path-title">
+  <div class="wrap path-head">
+    <p class="kicker" data-reveal>Le chemin d’une récolte</p>
+    <h2 id="path-title" data-words>Une graine,<br>des mains, <span class="hl">un voyage.</span></h2>
+  </div>
+  <div class="wrap path-body" data-draw data-lightbox-group>
+    <svg class="path-line" viewBox="0 0 100 1000" preserveAspectRatio="none" aria-hidden="true">
+      <path pathLength="1" d="M50,0 C92,90 92,160 50,200 S8,310 50,400 S92,510 50,600 S8,710 50,800 S92,930 50,1000"/>
+    </svg>
+    <ol class="path-steps"><li class="path-step" data-reveal>
+      <div class="path-photo"><a class="frame" href="assets/photos/pepiniere-plaques.webp" data-lightbox data-caption="Préparation des plaques de semis à la pépinière" data-alt="Préparation des plaques de semis à la pépinière" aria-label="Agrandir : Préparation des plaques de semis à la pépinière"><img src="assets/photos/pepiniere-plaques.webp" srcset="assets/photos/pepiniere-plaques-640.webp 640w, assets/photos/pepiniere-plaques.webp 1000w" sizes="(max-width: 700px) 100vw, 34vw" width="1000" height="522" alt="Préparation des plaques de semis à la pépinière" loading="lazy" decoding="async"></a></div>
+      <div class="path-copy"><h3>La pépinière</h3><p>Sous ombrière, les jeunes plants prennent force avant de rejoindre le champ.</p></div>
+    </li><li class="path-step" data-reveal>
+      <div class="path-photo"><a class="frame" href="assets/photos/plantation.webp" data-lightbox data-caption="Une équipe au travail dans une grande parcelle" data-alt="Une équipe au travail dans une grande parcelle" aria-label="Agrandir : Une équipe au travail dans une grande parcelle"><img src="assets/photos/plantation.webp" width="564" height="925" alt="Une équipe au travail dans une grande parcelle" loading="lazy" decoding="async"></a></div>
+      <div class="path-copy"><h3>Au champ</h3><p>Les parcelles sont plantées et irriguées au goutte-à-goutte, pour maîtriser l’utilisation de l’eau.</p></div>
+    </li><li class="path-step" data-reveal>
+      <div class="path-photo"><a class="frame" href="assets/photos/recolte-mais.webp" data-lightbox data-caption="Récolte du maïs au champ" data-alt="Récolte du maïs au champ" aria-label="Agrandir : Récolte du maïs au champ"><img src="assets/photos/recolte-mais.webp" width="564" height="925" alt="Récolte du maïs au champ" loading="lazy" decoding="async"></a></div>
+      <div class="path-copy"><h3>La récolte</h3><p>Mangues, oignons, maïs : les équipes du domaine, renforcées par les saisonniers, récoltent à maturité.</p></div>
+    </li><li class="path-step" data-reveal>
+      <div class="path-photo"><a class="frame" href="assets/photos/conditionnement-chaine.webp" data-lightbox data-caption="La chaîne de conditionnement des mangues" data-alt="La chaîne de conditionnement des mangues" aria-label="Agrandir : La chaîne de conditionnement des mangues"><img src="assets/photos/conditionnement-chaine.webp" width="564" height="925" alt="La chaîne de conditionnement des mangues" loading="lazy" decoding="async"></a></div>
+      <div class="path-copy"><h3>Au conditionnement</h3><p>Dans les stations du domaine, les fruits sont contrôlés, triés et mis en cartons.</p></div>
+    </li><li class="path-step" data-reveal>
+      <div class="path-photo"><a class="frame" href="assets/photos/chargement-camion.webp" data-lightbox data-caption="Chargement d’un camion au départ du domaine" data-alt="Chargement d’un camion au départ du domaine" aria-label="Agrandir : Chargement d’un camion au départ du domaine"><img src="assets/photos/chargement-camion.webp" srcset="assets/photos/chargement-camion-640.webp 640w, assets/photos/chargement-camion.webp 1000w" sizes="(max-width: 700px) 100vw, 34vw" width="1000" height="522" alt="Chargement d’un camion au départ du domaine" loading="lazy" decoding="async"></a></div>
+      <div class="path-copy"><h3>Le départ</h3><p>Les récoltes prennent la route vers les marchés du Sénégal, d’Europe et d’Afrique.</p></div>
+    </li></ol>
+  </div>
+</section>
+
+<section class="band" data-panel>
+  <div class="band-media"><img src="assets/photos/champ-horizon.webp" srcset="assets/photos/champ-horizon-640.webp 640w, assets/photos/champ-horizon.webp 1000w" sizes="100vw" width="1000" height="522" alt="Une parcelle du domaine, jusqu’à l’horizon" loading="lazy" decoding="async" style="object-position:center 72%"></div>
+  <div class="wrap band-inner"><div class="band-card" data-reveal><h2>Des terres, plusieurs horizons.</h2><p>Néma Nding, Keur Lamine Diamé et Kibik : le domaine est implanté dans les régions de Fatick et de Thiès, et s’étend vers Nguéniène.</p><a class="link link--dark" href="a-propos.html">Nos territoires <span aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div></div>
+</section>
+
+<section class="engagements wrap" aria-labelledby="engage-title">
+  <div class="section-head">
+    <div><p class="kicker" data-reveal>Nos engagements</p><h2 id="engage-title" data-words>Faire place <span class="hl">à l’avenir.</span></h2></div>
+    <p data-reveal>Le développement du domaine s’appuie sur l’attention portée aux personnes, aux communautés et aux ressources.</p>
+  </div>
+  <div class="engage-grid">
+    <article class="engage" data-reveal>
+      <div class="engage-disc"><img src="assets/photos/champ-paillage.webp" width="564" height="925" alt="Culture sur paillage, irriguée au goutte-à-goutte" loading="lazy" decoding="async"></div>
+      <h3>Préserver les ressources</h3>
+      <p>Irrigation au goutte-à-goutte, énergie solaire et biogaz, protection raisonnée des cultures et plantations de manguiers qui contribuent au stockage du carbone.</p>
+      <a class="link" href="valeurs.html#environnement">Notre démarche <span aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
     </article>
-    <article class="product p-seed reveal" data-category="seed">
-      <div class="frame"><img src="assets/recolte-mais.webp" alt="Récolte et mise en sacs du maïs au domaine" width="564" height="1000" loading="lazy"></div>
-      <p class="label">Cultiver</p>
-      <h3>Cultures &amp; maraîchage</h3>
-      <p>Maraîchage et culture du maïs, en complément de l’arboriculture.</p>
-      <button class="link" data-product="Cultures &amp; maraîchage">Découvrir</button>
+    <article class="engage" data-reveal>
+      <div class="engage-disc"><img src="assets/photos/pepiniere-serre.webp" width="564" height="925" alt="Jeunes plants sous l’ombrière de la pépinière" loading="lazy" decoding="async"></div>
+      <h3>Respecter les personnes</h3>
+      <p>Des engagements fondés sur le respect des droits des collaborateurs, les règles sociales en vigueur et la couverture prévue pour les équipes.</p>
+      <a class="link" href="valeurs.html#collaborateurs">Nos engagements sociaux <span aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
     </article>
-    <article class="product p-plant reveal" data-category="plant">
-      <div class="frame"><img src="assets/elevage.webp" alt="Une vache et son veau au domaine" width="941" height="1670" loading="lazy"></div>
-      <p class="label">Diversifier</p>
-      <h3>Élevage &amp; pisciculture</h3>
-      <p>Des productions animales et aquacoles au sein du domaine.</p>
-      <button class="link" data-product="Élevage &amp; pisciculture">Découvrir</button>
+    <article class="engage" data-reveal>
+      <div class="engage-disc"><img src="assets/photos/recolte-caisses.webp" width="540" height="960" alt="Une équipe de récolte devant les caisses remplies" loading="lazy" decoding="async"></div>
+      <h3>Grandir avec les communautés</h3>
+      <p>Participation aux activités de vacances des jeunes, dons aux postes de santé et soutien aux cérémonies religieuses et aux activités culturelles.</p>
+      <a class="link" href="valeurs.html#communautes">Nos actions locales <span aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
     </article>
-    <figure class="p-orchard reveal" data-category="fruit">
-      <div class="frame"><img src="assets/mangues-sur-arbre.webp" alt="Jeunes mangues sur les branches d’un manguier du domaine" width="564" height="1000" loading="lazy"></div>
-      <figcaption>Au verger, les fruits prennent forme.</figcaption>
-    </figure>
   </div>
 </section>
 
-<section class="terre wrap g13" aria-label="Notre lien à la terre">
-  <figure class="frame reveal"><img src="assets/cultures.webp" alt="Rangées de cultures au Domaine Agricole de Néma" width="1000" height="564" loading="lazy"></figure>
-  <div class="terre-side reveal">
-    <figure class="frame terre-inset"><img src="assets/plantation.webp" alt="Travail de plantation au domaine" width="564" height="1000" loading="lazy"></figure>
-    <blockquote>Les lignes changent.<br><em>La terre reste.</em></blockquote>
+<section class="team wrap" aria-labelledby="team-title" data-lightbox-group>
+  <div class="team-media">
+    <figure class="team-main" data-reveal><a class="frame" href="assets/photos/equipe-partenaire.webp" data-lightbox data-caption="Aminata Dominique Diouf, directrice du domaine, avec un partenaire." data-alt="Aminata Dominique Diouf, directrice du domaine, avec un partenaire" aria-label="Agrandir : Aminata Dominique Diouf, directrice du domaine, avec un partenaire."><img src="assets/photos/equipe-partenaire.webp" srcset="assets/photos/equipe-partenaire-640.webp 640w, assets/photos/equipe-partenaire.webp 1080w" sizes="(max-width: 700px) 100vw, 46vw" width="1080" height="607" alt="Aminata Dominique Diouf, directrice du domaine, avec un partenaire" loading="lazy" decoding="async" style="object-position:65% center"></a><figcaption>Aminata Dominique Diouf, directrice du domaine, avec un partenaire.</figcaption></figure>
+    <div class="team-badge" aria-hidden="true"><span>Depuis</span><strong>2014</strong><span>à la direction</span></div>
+  </div>
+  <div class="team-copy">
+    <p class="kicker" data-reveal>Celles et ceux qui font DAN</p>
+    <h2 id="team-title" data-words>Un savoir-faire <span class="hl">en partage.</span></h2>
+    <p class="lede" data-reveal>Depuis 2014, Aminata Dominique Diouf assure la direction du domaine. Elle est secondée par Alioune Badara Sylla, ingénieur agronome, à la tête d’une équipe technique et d’ouvriers saisonniers.</p>
+    <a class="link" href="organisation.html" data-reveal>Découvrir les équipes <span aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
   </div>
 </section>
 
-<section id="export" class="section export wrap g13">
-  <div class="export-text reveal">
-    <p class="label">À l’international</p>
-    <h2>Ici commence<br><em>ailleurs.</em></h2>
-    <p>Au Sénégal, en Europe et en Afrique : le domaine développe un réseau de distribution pour ses mangues.</p>
-    <a href="#contact" class="cta">Parlons export</a>
+<section class="wall" aria-labelledby="wall-title" data-lightbox-group>
+  <div class="wrap section-head">
+    <div><p class="kicker" data-reveal>En images</p><h2 id="wall-title" data-words>Une saison <span class="hl">au domaine.</span></h2></div>
+    <a class="btn btn--ghost" href="galerie.html" data-reveal>Toute la galerie <span aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
   </div>
-  <ol class="steps reveal">
-    <li><span>01</span><h3>Votre besoin</h3><p>Produit, volume, destination et calendrier.</p></li>
-    <li><span>02</span><h3>Notre offre</h3><p>Format, qualité et conditionnement.</p></li>
-    <li><span>03</span><h3>L’expédition</h3><p>Logistique et documents précisés avant confirmation.</p></li>
-    <li><span>04</span><h3>Le suivi</h3><p>Un interlocuteur pour chaque commande.</p></li>
-  </ol>
+  <div class="marquee"><div class="marquee-track"><a class="marquee-item" href="assets/photos/recolte-ensachage.webp" data-lightbox data-caption="Mise en sacs de la récolte" data-alt="Mise en sacs de la récolte" aria-label="Agrandir : Mise en sacs de la récolte"><img src="assets/photos/recolte-ensachage.webp" width="564" height="925" alt="Mise en sacs de la récolte" loading="lazy" decoding="async"></a><a class="marquee-item" href="assets/photos/pepiniere-plants.webp" data-lightbox data-caption="Jeunes plants vigoureux sous ombrière" data-alt="Jeunes plants vigoureux sous ombrière" aria-label="Agrandir : Jeunes plants vigoureux sous ombrière"><img src="assets/photos/pepiniere-plants.webp" width="564" height="925" alt="Jeunes plants vigoureux sous ombrière" loading="lazy" decoding="async"></a><a class="marquee-item" href="assets/photos/mais-sacs.webp" data-lightbox data-caption="Sacs de maïs égrené" data-alt="Sacs de maïs égrené" aria-label="Agrandir : Sacs de maïs égrené"><img src="assets/photos/mais-sacs.webp" srcset="assets/photos/mais-sacs-640.webp 640w, assets/photos/mais-sacs.webp 1000w" sizes="320px" width="1000" height="522" alt="Sacs de maïs égrené" loading="lazy" decoding="async"></a><a class="marquee-item" href="assets/photos/courge-coupe.webp" data-lightbox data-caption="Courges butternut fraîchement coupées" data-alt="Courges butternut fraîchement coupées" aria-label="Agrandir : Courges butternut fraîchement coupées"><img src="assets/photos/courge-coupe.webp" srcset="assets/photos/courge-coupe-640.webp 640w, assets/photos/courge-coupe.webp 1000w" sizes="320px" width="1000" height="522" alt="Courges butternut fraîchement coupées" loading="lazy" decoding="async"></a><a class="marquee-item" href="assets/photos/oignons-conteneur.webp" data-lightbox data-caption="Oignons chargés dans un conteneur" data-alt="Oignons chargés dans un conteneur" aria-label="Agrandir : Oignons chargés dans un conteneur"><img src="assets/photos/oignons-conteneur.webp" srcset="assets/photos/oignons-conteneur-640.webp 640w, assets/photos/oignons-conteneur.webp 960w" sizes="320px" width="960" height="1280" alt="Oignons chargés dans un conteneur" loading="lazy" decoding="async"></a><a class="marquee-item" href="assets/photos/repiquage.webp" data-lightbox data-caption="Repiquage de jeunes plants au champ" data-alt="Repiquage de jeunes plants au champ" aria-label="Agrandir : Repiquage de jeunes plants au champ"><img src="assets/photos/repiquage.webp" width="564" height="925" alt="Repiquage de jeunes plants au champ" loading="lazy" decoding="async"></a><a class="marquee-item" href="assets/photos/mangues-cartons.webp" data-lightbox data-caption="Mangues Kent conditionnées en cartons" data-alt="Mangues Kent conditionnées en cartons" aria-label="Agrandir : Mangues Kent conditionnées en cartons"><img src="assets/photos/mangues-cartons.webp" srcset="assets/photos/mangues-cartons-640.webp 640w, assets/photos/mangues-cartons.webp 720w" sizes="320px" width="720" height="1280" alt="Mangues Kent conditionnées en cartons" loading="lazy" decoding="async"></a><a aria-hidden="true" tabindex="-1" class="marquee-item" href="assets/photos/recolte-ensachage.webp" data-lightbox data-caption="Mise en sacs de la récolte" data-alt="Mise en sacs de la récolte" aria-label="Agrandir : Mise en sacs de la récolte"><img src="assets/photos/recolte-ensachage.webp" width="564" height="925" alt="" loading="lazy" decoding="async"></a><a aria-hidden="true" tabindex="-1" class="marquee-item" href="assets/photos/pepiniere-plants.webp" data-lightbox data-caption="Jeunes plants vigoureux sous ombrière" data-alt="Jeunes plants vigoureux sous ombrière" aria-label="Agrandir : Jeunes plants vigoureux sous ombrière"><img src="assets/photos/pepiniere-plants.webp" width="564" height="925" alt="" loading="lazy" decoding="async"></a><a aria-hidden="true" tabindex="-1" class="marquee-item" href="assets/photos/mais-sacs.webp" data-lightbox data-caption="Sacs de maïs égrené" data-alt="Sacs de maïs égrené" aria-label="Agrandir : Sacs de maïs égrené"><img src="assets/photos/mais-sacs.webp" srcset="assets/photos/mais-sacs-640.webp 640w, assets/photos/mais-sacs.webp 1000w" sizes="320px" width="1000" height="522" alt="" loading="lazy" decoding="async"></a><a aria-hidden="true" tabindex="-1" class="marquee-item" href="assets/photos/courge-coupe.webp" data-lightbox data-caption="Courges butternut fraîchement coupées" data-alt="Courges butternut fraîchement coupées" aria-label="Agrandir : Courges butternut fraîchement coupées"><img src="assets/photos/courge-coupe.webp" srcset="assets/photos/courge-coupe-640.webp 640w, assets/photos/courge-coupe.webp 1000w" sizes="320px" width="1000" height="522" alt="" loading="lazy" decoding="async"></a><a aria-hidden="true" tabindex="-1" class="marquee-item" href="assets/photos/oignons-conteneur.webp" data-lightbox data-caption="Oignons chargés dans un conteneur" data-alt="Oignons chargés dans un conteneur" aria-label="Agrandir : Oignons chargés dans un conteneur"><img src="assets/photos/oignons-conteneur.webp" srcset="assets/photos/oignons-conteneur-640.webp 640w, assets/photos/oignons-conteneur.webp 960w" sizes="320px" width="960" height="1280" alt="" loading="lazy" decoding="async"></a><a aria-hidden="true" tabindex="-1" class="marquee-item" href="assets/photos/repiquage.webp" data-lightbox data-caption="Repiquage de jeunes plants au champ" data-alt="Repiquage de jeunes plants au champ" aria-label="Agrandir : Repiquage de jeunes plants au champ"><img src="assets/photos/repiquage.webp" width="564" height="925" alt="" loading="lazy" decoding="async"></a><a aria-hidden="true" tabindex="-1" class="marquee-item" href="assets/photos/mangues-cartons.webp" data-lightbox data-caption="Mangues Kent conditionnées en cartons" data-alt="Mangues Kent conditionnées en cartons" aria-label="Agrandir : Mangues Kent conditionnées en cartons"><img src="assets/photos/mangues-cartons.webp" srcset="assets/photos/mangues-cartons-640.webp 640w, assets/photos/mangues-cartons.webp 720w" sizes="320px" width="720" height="1280" alt="" loading="lazy" decoding="async"></a></div></div>
+  <div class="marquee marquee--reverse"><div class="marquee-track"><a class="marquee-item" href="assets/photos/champ-aigrettes.webp" data-lightbox data-caption="Aigrettes au-dessus d’une parcelle fraîchement plantée" data-alt="Aigrettes au-dessus d’une parcelle fraîchement plantée" aria-label="Agrandir : Aigrettes au-dessus d’une parcelle fraîchement plantée"><img src="assets/photos/champ-aigrettes.webp" srcset="assets/photos/champ-aigrettes-640.webp 640w, assets/photos/champ-aigrettes.webp 1000w" sizes="320px" width="1000" height="522" alt="Aigrettes au-dessus d’une parcelle fraîchement plantée" loading="lazy" decoding="async"></a><a class="marquee-item" href="assets/photos/conditionnement-tri.webp" data-lightbox data-caption="Contrôle des mangues sur la ligne de tri" data-alt="Contrôle des mangues sur la ligne de tri" aria-label="Agrandir : Contrôle des mangues sur la ligne de tri"><img src="assets/photos/conditionnement-tri.webp" width="540" height="960" alt="Contrôle des mangues sur la ligne de tri" loading="lazy" decoding="async"></a><a class="marquee-item" href="assets/photos/pepiniere-serre.webp" data-lightbox data-caption="Jeunes plants sous l’ombrière de la pépinière" data-alt="Jeunes plants sous l’ombrière de la pépinière" aria-label="Agrandir : Jeunes plants sous l’ombrière de la pépinière"><img src="assets/photos/pepiniere-serre.webp" width="564" height="925" alt="Jeunes plants sous l’ombrière de la pépinière" loading="lazy" decoding="async"></a><a class="marquee-item" href="assets/photos/recolte-sacs.webp" data-lightbox data-caption="Sacs de récolte alignés au champ" data-alt="Sacs de récolte alignés au champ" aria-label="Agrandir : Sacs de récolte alignés au champ"><img src="assets/photos/recolte-sacs.webp" srcset="assets/photos/recolte-sacs-640.webp 640w, assets/photos/recolte-sacs.webp 1000w" sizes="320px" width="1000" height="522" alt="Sacs de récolte alignés au champ" loading="lazy" decoding="async"></a><a class="marquee-item" href="assets/photos/equipe-terrain.webp" data-lightbox data-caption="Une visite de terrain avec les équipes" data-alt="Une visite de terrain avec les équipes" aria-label="Agrandir : Une visite de terrain avec les équipes"><img src="assets/photos/equipe-terrain.webp" srcset="assets/photos/equipe-terrain-640.webp 640w, assets/photos/equipe-terrain.webp 1080w" sizes="320px" width="1080" height="607" alt="Une visite de terrain avec les équipes" loading="lazy" decoding="async"></a><a class="marquee-item" href="assets/photos/champ-paillage.webp" data-lightbox data-caption="Culture sur paillage, irriguée au goutte-à-goutte" data-alt="Culture sur paillage, irriguée au goutte-à-goutte" aria-label="Agrandir : Culture sur paillage, irriguée au goutte-à-goutte"><img src="assets/photos/champ-paillage.webp" width="564" height="925" alt="Culture sur paillage, irriguée au goutte-à-goutte" loading="lazy" decoding="async"></a><a class="marquee-item" href="assets/photos/elevage-vache.webp" data-lightbox data-caption="Une vache et son veau au domaine" data-alt="Une vache et son veau au domaine" aria-label="Agrandir : Une vache et son veau au domaine"><img src="assets/photos/elevage-vache.webp" srcset="assets/photos/elevage-vache-640.webp 640w, assets/photos/elevage-vache.webp 941w" sizes="320px" width="941" height="1545" alt="Une vache et son veau au domaine" loading="lazy" decoding="async"></a><a aria-hidden="true" tabindex="-1" class="marquee-item" href="assets/photos/champ-aigrettes.webp" data-lightbox data-caption="Aigrettes au-dessus d’une parcelle fraîchement plantée" data-alt="Aigrettes au-dessus d’une parcelle fraîchement plantée" aria-label="Agrandir : Aigrettes au-dessus d’une parcelle fraîchement plantée"><img src="assets/photos/champ-aigrettes.webp" srcset="assets/photos/champ-aigrettes-640.webp 640w, assets/photos/champ-aigrettes.webp 1000w" sizes="320px" width="1000" height="522" alt="" loading="lazy" decoding="async"></a><a aria-hidden="true" tabindex="-1" class="marquee-item" href="assets/photos/conditionnement-tri.webp" data-lightbox data-caption="Contrôle des mangues sur la ligne de tri" data-alt="Contrôle des mangues sur la ligne de tri" aria-label="Agrandir : Contrôle des mangues sur la ligne de tri"><img src="assets/photos/conditionnement-tri.webp" width="540" height="960" alt="" loading="lazy" decoding="async"></a><a aria-hidden="true" tabindex="-1" class="marquee-item" href="assets/photos/pepiniere-serre.webp" data-lightbox data-caption="Jeunes plants sous l’ombrière de la pépinière" data-alt="Jeunes plants sous l’ombrière de la pépinière" aria-label="Agrandir : Jeunes plants sous l’ombrière de la pépinière"><img src="assets/photos/pepiniere-serre.webp" width="564" height="925" alt="" loading="lazy" decoding="async"></a><a aria-hidden="true" tabindex="-1" class="marquee-item" href="assets/photos/recolte-sacs.webp" data-lightbox data-caption="Sacs de récolte alignés au champ" data-alt="Sacs de récolte alignés au champ" aria-label="Agrandir : Sacs de récolte alignés au champ"><img src="assets/photos/recolte-sacs.webp" srcset="assets/photos/recolte-sacs-640.webp 640w, assets/photos/recolte-sacs.webp 1000w" sizes="320px" width="1000" height="522" alt="" loading="lazy" decoding="async"></a><a aria-hidden="true" tabindex="-1" class="marquee-item" href="assets/photos/equipe-terrain.webp" data-lightbox data-caption="Une visite de terrain avec les équipes" data-alt="Une visite de terrain avec les équipes" aria-label="Agrandir : Une visite de terrain avec les équipes"><img src="assets/photos/equipe-terrain.webp" srcset="assets/photos/equipe-terrain-640.webp 640w, assets/photos/equipe-terrain.webp 1080w" sizes="320px" width="1080" height="607" alt="" loading="lazy" decoding="async"></a><a aria-hidden="true" tabindex="-1" class="marquee-item" href="assets/photos/champ-paillage.webp" data-lightbox data-caption="Culture sur paillage, irriguée au goutte-à-goutte" data-alt="Culture sur paillage, irriguée au goutte-à-goutte" aria-label="Agrandir : Culture sur paillage, irriguée au goutte-à-goutte"><img src="assets/photos/champ-paillage.webp" width="564" height="925" alt="" loading="lazy" decoding="async"></a><a aria-hidden="true" tabindex="-1" class="marquee-item" href="assets/photos/elevage-vache.webp" data-lightbox data-caption="Une vache et son veau au domaine" data-alt="Une vache et son veau au domaine" aria-label="Agrandir : Une vache et son veau au domaine"><img src="assets/photos/elevage-vache.webp" srcset="assets/photos/elevage-vache-640.webp 640w, assets/photos/elevage-vache.webp 941w" sizes="320px" width="941" height="1545" alt="" loading="lazy" decoding="async"></a></div></div>
 </section>
-
-<section id="equipe" class="section section-tight team wrap g13" aria-labelledby="team-title">
-  <div class="team-text reveal">
-    <p class="label">Notre équipe</p>
-    <h2 id="team-title">Ceux<br><em>qui font.</em></h2>
-    <div class="team-list">
-      <a class="team-row" href="organisation.html#direction"><h3>Direction</h3><small>PCA · DG · DGA</small></a>
-      <a class="team-row" href="organisation.html#production"><h3>Production</h3><small>Cultures · Transformation · Élevage</small></a>
-      <a class="team-row" href="organisation.html#qualite"><h3>Qualité &amp; gestion</h3><small>RQHSE · Administration · Finances</small></a>
-    </div>
-    <a class="link" href="organisation.html">Toute notre organisation</a>
-    <figure class="team-note">
-      <div class="frame"><img src="assets/charge_camion.jpeg" alt="Équipe du domaine chargeant des cagettes de récolte dans un camion" width="1000" height="564" loading="lazy"></div>
-    </figure>
-  </div>
-  <figure class="team-photo frame reveal"><img src="assets/conditionnement.webp" alt="Équipe préparant les mangues au conditionnement" width="564" height="1000" loading="lazy"></figure>
-</section>
-
 </main>
 <footer id="contact" class="site-footer">
-<div class="wrap">
-  <div class="footer-top">
-    <a class="brand" href="index.html"><img src="assets/logo-dan.jpeg" alt="DAN — Domaine Agricole de Néma" width="273" height="103"></a>
-    <p>La terre. Et au-delà.</p>
+  <div class="wrap">
+    <div class="footer-main">
+      <h2 data-words>Parlons de vos <span class="hl">projets agricoles.</span></h2>
+      <div class="footer-contact" data-reveal>
+        <a class="footer-cta" href="mailto:contact@dan.sn" data-magnet>Écrire au domaine <span aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+        <a href="tel:+221338898712">+221 33 889 87 12</a>
+        <a href="mailto:contact@dan.sn">contact@dan.sn</a>
+        <span>1, rue Ramez Bourgi · Sénégal</span>
+      </div>
+    </div>
+    <nav class="footer-links" aria-label="Navigation de pied de page"><a href="a-propos.html">Le domaine</a><a href="activites.html">Nos activités</a><a href="valeurs.html">Nos engagements</a><a href="organisation.html">Les équipes</a><a href="galerie.html">En images</a></nav>
+    <div class="footer-bottom"><span>© 2026 Domaine Agricole de Néma</span><span>La terre nous réunit.</span></div>
+    <p class="legal-line">SA au capital de 150 000 000 FCFA · NINEA : 005136909 · RCCM : SN DKR 14431</p>
   </div>
-</div>
-<div class="footer-band">
-<div class="wrap">
-  <div class="footer-links">
-    <a href="a-propos.html">À propos</a>
-    <a href="activites.html">Nos activités</a>
-    <a href="valeurs.html">Nos valeurs</a>
-    <a href="organisation.html">Notre organisation</a>
-    <a href="tel:+221338898712">+221 33 889 87 12</a>
-    <a href="mailto:contact@dan.sn">contact@dan.sn</a>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Domaine Agricole de Néma</span>
-    <span>1, rue Ramez Bourgi</span>
-  </div>
-  <p class="legal-line">SA au capital de 150 000 000 FCFA · NINEA : 005136909 · RCCM : SN DKR 14431</p>
-</div>
-</div>
 </footer>
-
-<dialog class="detail" id="detail">
-  <button class="close" aria-label="Fermer la fiche produit">Fermer</button>
-  <p class="label">Les productions du domaine</p>
-  <h2 id="detail-title"></h2>
-  <p id="detail-description"></p>
-  <button id="inquire" class="cta">Nous contacter</button>
+<dialog id="lightbox" class="lightbox" aria-label="Visionneuse d’images">
+  <button class="lb-close" type="button" data-lb-close>Fermer</button>
+  <figure><img data-lb-img alt=""><figcaption><span data-lb-caption></span><span data-lb-count></span></figcaption></figure>
+  <button class="lb-btn lb-prev" type="button" data-lb-prev aria-label="Image précédente"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+  <button class="lb-btn lb-next" type="button" data-lb-next aria-label="Image suivante"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
 </dialog>
-
-<script src="gsap.min.js"></script>
-<script src="ScrollTrigger.min.js"></script>
-<script>
-const menu=document.querySelector('#menu'),nav=document.querySelector('#nav');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Fermer':'Menu'});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu'}));
-
-const catalog=document.querySelector('.catalog');
-document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>{
-  const f=button.dataset.filter;
-  document.querySelectorAll('.filter').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-  catalog.classList.toggle('is-filtered',f!=='all');
-  [...catalog.children].forEach(p=>p.hidden=f!=='all'&&p.dataset.category!==f);
-  if(window.ScrollTrigger)ScrollTrigger.refresh();
-}));
-
-const descriptions={"Mangue Kent": "La variété Kent est cultivée au domaine. Elle se distingue par sa chair douce et juteuse. La présentation du domaine indique un début de récolte à partir de mi-mai ; calendrier, volumes et conditions à confirmer pour chaque commande.", "Cultures & maraîchage": "Le maraîchage et la culture du maïs font partie des activités du Domaine Agricole de Néma, en complément de l’arboriculture. Les productions disponibles sont à préciser lors de votre échange.", "Élevage & pisciculture": "Le domaine mène des activités d’élevage et de pisciculture. Contactez l’équipe pour connaître les productions et les disponibilités."};
-const detail=document.querySelector('#detail');
-document.querySelectorAll('[data-product]').forEach(b=>b.addEventListener('click',()=>{
-  document.querySelector('#detail-title').textContent=b.dataset.product;
-  document.querySelector('#detail-description').textContent=descriptions[b.dataset.product];
-  detail.showModal();
-}));
-detail.querySelector('.close').onclick=()=>detail.close();
-detail.addEventListener('click',e=>{if(e.target===detail){const r=detail.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)detail.close()}});
-document.querySelector('#inquire').onclick=()=>{
-  detail.close();
-  document.querySelector('#contact').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
-  document.querySelector('#contact a[href^="mailto:"]').focus({preventScroll:true});
-};
-
-// Diaporama d'ouverture : premier changement après 1,5 s, puis une paire toutes les 2,4 s, en
-// fondu ; le petit cadre suit le grand
-// avec un léger retard. Désactivé si le visiteur a demandé à réduire les animations.
-(()=>{
-  const PREMIER=1500,PAUSE=2400,FONDU=1100,RETARD=400;
-  const cadres=[...document.querySelectorAll('.slideshow')].map(c=>[...c.querySelectorAll('img')]);
-  if(cadres.length<2||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  const total=cadres[0].length;
-  const charger=img=>{
-    // Le petit cadre est masqué sur mobile : inutile d'y télécharger ses images.
-    if(!img.closest('.slideshow').offsetParent)return Promise.resolve();
-    if(img.dataset.src){img.src=img.dataset.src;delete img.dataset.src}
-    return img.decode?img.decode().catch(()=>{}):Promise.resolve();
-  };
-  const montrer=(images,n)=>{
-    const actuelle=images.find(i=>i.classList.contains('is-on')),suivante=images[n];
-    if(!actuelle||actuelle===suivante)return;
-    actuelle.classList.replace('is-on','is-leaving');
-    suivante.classList.add('is-on');
-    setTimeout(()=>actuelle.classList.remove('is-leaving'),FONDU);
-  };
-  let index=0,minuterie=0;
-  const avancer=()=>{
-    const n=(index+1)%total;
-    Promise.all(cadres.map(c=>charger(c[n]))).then(()=>{
-      index=n;
-      montrer(cadres[0],n);
-      setTimeout(()=>montrer(cadres[1],n),RETARD);
-      cadres.forEach(c=>charger(c[(n+1)%total]));
-    });
-  };
-  const lancer=()=>{clearInterval(minuterie);if(!document.hidden)minuterie=setInterval(avancer,PAUSE)};
-  document.addEventListener('visibilitychange',lancer);
-  // Le visiteur lit vite l'accroche : la première paire cède la place sans attendre un tour complet.
-  addEventListener('load',()=>{cadres.forEach(c=>charger(c[1]));setTimeout(()=>{avancer();lancer()},PREMIER)});
-})();
-
-if(window.gsap&&window.ScrollTrigger&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.from('.hero-text > *',{y:21,opacity:0,duration:1,stagger:.13,ease:'power2.out'});
-  gsap.from('.hero-main,.hero-inset',{opacity:0,duration:1.4,stagger:.3,ease:'power2.out'});
-  gsap.utils.toArray('.reveal').forEach(el=>gsap.from(el,{y:21,opacity:0,duration:.8,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 89%',once:true}}));
-}
-</script>
 </body>
 </html>
