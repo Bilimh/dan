@@ -185,7 +185,7 @@ def page(filename, title, description, body, preload=None, home=False):
         <a class="footer-cta" href="mailto:contact@dan.sn" data-magnet>Écrire au domaine <span aria-hidden="true">↗</span></a>
         <a href="tel:+221338898712">+221 33 889 87 12</a>
         <a href="mailto:contact@dan.sn">contact@dan.sn</a>
-        <span>1, rue Ramez Bourgi · Sénégal</span>
+        <span>Almadies, route du King Fahd Palace, immeuble A2 · Sénégal</span>
       </div>
     </div>
     <nav class="footer-links" aria-label="Navigation de pied de page">{''.join(f'<a href="{h}">{l}</a>' for h, l in NAV)}</nav>
