@@ -235,7 +235,7 @@ def roundel(photos, ring=RING, eager=True, cls=""):
     ) if len(photos) > 1 else ""
     return f"""<div class="roundel {cls}" data-slides="2600">
   <div class="roundel-disc">{''.join(slides)}</div>
-  <svg class="roundel-ring" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ring-{cls or 'p'}" d="M100,100 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/></defs><text textLength="548" lengthAdjust="spacing"><textPath href="#ring-{cls or 'p'}" textLength="548" lengthAdjust="spacing">{e(ring)}</textPath></text></svg>
+  <span class="roundel-ring" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="ring-{cls or 'p'}" d="M100,100 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/></defs><text textLength="548" lengthAdjust="spacing"><textPath href="#ring-{cls or 'p'}" textLength="548" lengthAdjust="spacing">{e(ring)}</textPath></text></svg></span>
   <span class="roundel-sun" aria-hidden="true"></span>
   {f'<div class="roundel-dots">{dots}</div>' if dots else ''}
   <p class="roundel-caption" data-caption aria-live="polite"></p>
@@ -416,7 +416,7 @@ HOME = f"""<section class="hero wrap" aria-labelledby="hero-title">
   <div class="team-copy">
     {kicker("Celles et ceux qui font DAN")}
     <h2 id="team-title" data-words>Un savoir-faire <span class="hl">en partage.</span></h2>
-    <p class="lede" data-reveal>Depuis 2014, Aminata Dominique Diouf assure la direction du domaine. Elle est secondée par Alioune Badara Sylla, ingénieur agronome, à la tête d’une équipe technique et d’ouvriers saisonniers.</p>
+    <p class="lede" data-reveal>Depuis 2014, Aminata Dominique Diouf assure la direction du domaine. Elle est secondée par Alioune Badara Sylla, ingénieur agronome, à la tête d’une jeune équipe technique et d’ouvriers saisonniers.</p>
     <a class="link" href="organisation.html" data-reveal>Découvrir les équipes <span aria-hidden="true">↗</span></a>
   </div>
 </section>
@@ -438,11 +438,11 @@ page("index.html", "Domaine Agricole de Néma — Cultiver, transformer, transme
 # ---------------------------------------------------------------------------- le domaine
 TIMELINE = [
     ("1996", "Vers 1996", "Les premiers sillons", "Création du domaine et démarrage des activités maraîchères.", "plantation"),
-    ("2000", "Vers 2000", "Les manguiers Kent", "Plantation des premiers manguiers de variété Kent, qui deviendront un axe majeur de l’activité arboricole.", "verger-mangues"),
-    ("2006", "2006–2007", "Le conditionnement et l’export", "Construction de la première station de conditionnement à Noflaye, dans la commune de Sangalkam. Premier certificat pour l’exportation de mangues vers l’Europe, puis expédition des premiers conteneurs.", "mangues-cartons"),
-    ("2010", "2010–2011", "De nouvelles terres à Kibik", "Acquisition de terres à Kibik, dans la commune de Sandiara, et construction d’une deuxième station de conditionnement.", "champ-rangs"),
-    ("2014", "2014–2015", "Une nouvelle direction", "Aminata Dominique Diouf prend la direction du domaine. DAN acquiert de nouvelles terres à Keur Samba Guèye.", "equipe-partenaire"),
-    ("2020", "2020–2022", "Transformer sur place", "Construction d’une usine de transformation de mangues et de produits dérivés, puis d’un centre de conditionnement équipé d’une chambre froide pouvant accueillir quatre conteneurs.", "conditionnement-chaine"),
+    ("2000", "Vers 2000", "Les manguiers Kent", "Plantation des premiers manguiers de la variété Kent.", "verger-mangues"),
+    ("2006", "2006–2007", "Le conditionnement et l’export", "Construction de la première station de conditionnement à Noflaye, dans la commune de Sangalkam ; obtention du premier certificat pour l’exportation de mangues vers l’Europe, puis expédition des premiers conteneurs.", "mangues-cartons"),
+    ("2010", "2010–2011", "De nouvelles terres à Kibik", "Acquisition de terres à Kibik, dans la commune de Sandiara, et construction de la deuxième station de conditionnement.", "champ-rangs"),
+    ("2014", "2014–2015", "Une nouvelle direction", "Prise de direction par Mme Aminata Dominique Diouf, puis acquisition de nouvelles terres à Keur Samba Guèye.", "equipe-partenaire"),
+    ("2020", "2020–2022", "Transformer sur place", "Construction d’une usine de transformation de mangues et de produits dérivés, puis d’un centre de conditionnement doté d’une chambre froide d’une capacité de quatre conteneurs.", "conditionnement-chaine"),
     ("2025", "Depuis 2025", "Un nouveau centre à Nguéniène", "Construction d’un nouveau centre de conditionnement dans la commune de Nguéniène, vers Fadial.", "chargement-camion"),
 ]
 timeline_html = "".join(
@@ -460,12 +460,12 @@ LOCATIONS = [
 ]
 ABOUT = f"""{page_hero("La terre.<br><span class=\"hl\">Et le temps.</span>", "Depuis près de trois décennies, le Domaine Agricole de Néma grandit avec ses terres, ses équipes et ses productions.", [("champ-horizon", "center 70%"), ("plantation", "center"), ("verger-mangues", "center 40%")])}
 <section class="wrap page-section">
-  <p class="statement" data-reveal>Fondé vers 1996 par Alioune Ndour Diouf, DAN associe production agricole, conditionnement, transformation et commercialisation. Son histoire s’écrit au fil des plantations, des outils de travail et des nouveaux territoires.</p>
+  <p class="statement" data-reveal>Le Domaine Agricole de Néma (DAN) est une entreprise agricole sénégalaise fondée vers 1996 par M. Alioune Ndour Diouf. Né de sa passion pour la terre et de son expérience de gestionnaire, le domaine associe production agricole, conditionnement, transformation et commercialisation.</p>
   <ol class="years" aria-label="Les étapes de développement" data-lightbox-group>{timeline_html}</ol>
 </section>
-{band("equipe-terrain", "La croissance du domaine s’appuie sur l’engagement des équipes.", position="center 35%")}
+{band("equipe-terrain", "Renforcer sa place dans l’agriculture au Sénégal et en Afrique.", "Le développement du domaine repose sur la qualité des produits, le savoir-faire de ses équipes, l’innovation et une gestion durable des ressources. À travers ses activités et ses engagements, DAN associe performance agricole, création d’emplois, respect des collaborateurs et contribution à la vie des communautés locales.", position="center 35%")}
 <section class="wrap page-section">
-  <div class="section-head"><div>{kicker("Nos territoires")}<h2 data-words>Des terres, <span class="hl">plusieurs horizons.</span></h2></div><p data-reveal>Le domaine est implanté dans plusieurs communes des régions de Fatick et de Thiès. Ses activités s’étendent également dans la commune de Nguéniène.</p></div>
+  <div class="section-head"><div>{kicker("Nos territoires")}<h2 data-words>Des terres, <span class="hl">plusieurs horizons.</span></h2></div><p data-reveal>Implanté dans les départements de Foundiougne (région de Fatick) et de Mbour (région de Thiès), DAN exploite aujourd’hui plusieurs centaines d’hectares. Ses activités s’étendent également dans la commune de Nguéniène.</p></div>
   <div class="locations">{''.join(f'<article class="location" data-reveal><span class="location-pin" aria-hidden="true"></span><h3>{n}</h3><p>{d}</p></article>' for n, d in LOCATIONS)}</div>
 </section>"""
 page("a-propos.html", "Le domaine — Domaine Agricole de Néma",
@@ -474,6 +474,19 @@ page("a-propos.html", "Le domaine — Domaine Agricole de Néma",
 
 
 # ---------------------------------------------------------------------------- activités
+MANGO = [
+    ("La qualité de la variété Kent :", "sa chair douce et juteuse et ses qualités gustatives constituent un atout pour notre offre. Nous appliquons des exigences rigoureuses de culture et de récolte."),
+    ("Une implantation favorable :", "les conditions d’ensoleillement et de pluviométrie favorisent la production. La précocité des récoltes permet de proposer des mangues à l’exportation dès la mi-mai."),
+    ("Des techniques agricoles modernes :", "l’irrigation au goutte-à-goutte et les pratiques de culture durables soutiennent la production tout en préservant les ressources naturelles."),
+    ("Une expertise locale :", "des professionnels expérimentés et passionnés mettent leur connaissance de l’arboriculture du manguier au service de la production."),
+]
+PROJECTS = [
+    ("Étendre et diversifier la production", "Augmenter les superficies cultivées et introduire de nouvelles variétés de mangues et d’autres spéculations maraîchères pour répondre à la demande des marchés locaux et internationaux."),
+    ("Développer l’innovation technologique", "Intégrer des outils de surveillance des cultures et d’analyse des données pour améliorer les pratiques agricoles et optimiser les rendements. Les perspectives présentées incluent l’utilisation de drones pour la surveillance et les traitements phytosanitaires."),
+    ("Renforcer les compétences", "Développer des programmes de formation pour le personnel et les agriculteurs locaux, afin de partager le savoir-faire et les bonnes pratiques agricoles."),
+    ("Consolider les démarches de qualité", "S’appuyer sur les certifications et démarches de durabilité obtenues pour renforcer la confiance des clients et faciliter l’accès à de nouveaux marchés."),
+]
+
 def duo(main, second, caption_main, caption_second, sizes_main="(max-width: 700px) 100vw, 34vw", video_main=None):
     first = (f'<figure class="duo-a" data-reveal>{video(video_main)}<figcaption>{e(caption_main)}</figcaption></figure>'
              if video_main else figure(main, sizes_main, caption_main, "duo-a"))
@@ -486,9 +499,8 @@ ACTIVITIES = f"""{page_hero("Cultiver.<br><span class=\"hl\">Valoriser.</span>",
   {duo("verger-mangues", "mangues-cartons", "Au verger, les mangues prennent forme.", "Mangues Kent en cartons, prêtes à partir.")}
   <div class="split-copy">
     {kicker("Au cœur du verger")}
-    <h2 data-words>La mangue <span class="hl">Kent.</span></h2>
-    <p data-reveal>Plantés à partir des années 2000, les manguiers Kent occupent une place centrale dans les productions du domaine. La variété est appréciée pour sa chair douce et juteuse.</p>
-    <p data-reveal>L’ensoleillement et la pluviométrie de la zone favorisent la production. La précocité des récoltes permet d’envisager les premières disponibilités à l’export dès la mi-mai ; volumes et calendrier se précisent pour chaque campagne.</p>
+    <h2 data-words>Nos avantages <span class="hl">pour la mangue.</span></h2>
+    <ul class="checks">{''.join(f'<li data-reveal><strong>{t}</strong> {d}</li>' for t, d in MANGO)}</ul>
   </div>
 </section>
 
@@ -528,12 +540,9 @@ ACTIVITIES = f"""{page_hero("Cultiver.<br><span class=\"hl\">Valoriser.</span>",
 </section>
 
 <section id="projets" class="wrap chapter projects">
-  <div class="section-head"><div>{kicker("Les prochaines étapes")}<h2 data-words>Continuer <span class="hl">à grandir.</span></h2></div></div>
+  <div class="section-head"><div>{kicker("Nos projets futurs")}<h2 data-words>Continuer <span class="hl">à grandir.</span></h2></div><p data-reveal>DAN souhaite poursuivre son développement en renforçant sa production, ses outils techniques et les compétences de ses équipes.</p></div>
   <div class="project-grid">
-    <article class="project" data-reveal><span class="project-dot" aria-hidden="true"></span><h3>Diversifier</h3><p>Étendre et diversifier les productions, notamment par l’introduction de nouvelles variétés de mangues et d’autres cultures maraîchères.</p></article>
-    <article class="project" data-reveal><span class="project-dot" aria-hidden="true"></span><h3>Innover</h3><p>Des outils de surveillance des cultures et d’analyse des données, avec des pistes comme les drones.</p></article>
-    <article class="project" data-reveal><span class="project-dot" aria-hidden="true"></span><h3>Former</h3><p>Des formations pour le personnel et les agriculteurs locaux.</p></article>
-    <article class="project" data-reveal><span class="project-dot" aria-hidden="true"></span><h3>Construire</h3><p>Depuis 2025, un nouveau centre de conditionnement est en construction dans la commune de Nguéniène, vers Fadial.</p></article>
+    {''.join(f'<article class="project" data-reveal><span class="project-dot" aria-hidden="true"></span><h3>{t}</h3><p>{d}</p></article>' for t, d in PROJECTS)}
   </div>
 </section>"""
 page("activites.html", "Nos activités — Domaine Agricole de Néma",
@@ -542,23 +551,39 @@ page("activites.html", "Nos activités — Domaine Agricole de Néma",
 
 
 # ---------------------------------------------------------------------------- engagements
+MISSIONS = [
+    ("Produire", "Développer l’arboriculture et le maraîchage, ainsi que l’apiculture, l’élevage et la pisciculture."),
+    ("Valoriser les récoltes", "Assurer le conditionnement et la transformation, notamment des mangues et de leurs produits dérivés."),
+    ("Approvisionner les marchés", "Commercialiser nos produits au Sénégal et accompagner leur exportation vers les marchés européens et africains."),
+    ("Contribuer au développement local", "Créer des emplois et soutenir la vie des communautés dans nos zones d’implantation."),
+]
+ASSETS = [
+    ("Traçabilité et sécurité alimentaire :", "des systèmes de suivi permettent de retracer le parcours des mangues, depuis le verger jusqu’à leur commercialisation."),
+    ("Démarches de qualité et de responsabilité sociale :", "DAN s’appuie sur les reconnaissances mentionnées dans le cadre de GLOBALG.A.P., de Tesco Nurture et de GRASP, ainsi que sur les audits sociaux SMETA."),
+    ("Un réseau de distribution établi :", "l’entreprise commercialise ses mangues au Sénégal, en Europe et en Afrique pendant la campagne de production."),
+]
+
 VALUES = [
-    ("Qualité &amp; rigueur", "Des exigences de production, de récolte et de conditionnement au service de la qualité et de la sécurité alimentaire."),
-    ("Respect des personnes", "Le respect des droits des collaborateurs et des règles sociales en vigueur au Sénégal."),
-    ("Responsabilité environnementale", "Des pratiques agricoles durables et une gestion raisonnée des ressources."),
-    ("Ancrage local &amp; solidarité", "Une contribution à la vie sociale, sanitaire et culturelle des communautés où le domaine est implanté."),
-    ("Innovation &amp; savoir-faire", "L’expérience des équipes associée à l’amélioration des techniques agricoles."),
-    ("Traçabilité", "Des systèmes de suivi permettent de retracer le parcours des mangues, du verger jusqu’à leur commercialisation."),
+    ("Qualité &amp; rigueur", "Appliquer des exigences de production, de récolte et de conditionnement qui favorisent la qualité et la sécurité alimentaire."),
+    ("Respect des personnes", "Veiller au respect des droits des collaborateurs et des règles sociales en vigueur."),
+    ("Responsabilité environnementale", "Intégrer des pratiques agricoles durables et une gestion raisonnée des ressources."),
+    ("Ancrage local &amp; solidarité", "Participer à la vie sociale, sanitaire et culturelle des communautés."),
+    ("Innovation &amp; savoir-faire", "Associer l’expérience des équipes à l’amélioration des techniques agricoles."),
 ]
 ENV = [
-    ("Préserver l’eau.", "L’irrigation au goutte-à-goutte accompagne la production et maîtrise l’utilisation de l’eau."),
-    ("Mobiliser des énergies renouvelables.", "L’énergie solaire et le biogaz sont intégrés à la politique agricole du domaine."),
-    ("Raisonner la protection des cultures.", "Le domaine privilégie une utilisation raisonnée des pesticides et les bonnes pratiques agricoles."),
-    ("Valoriser les plantations.", "Les plantations de manguiers contribuent au stockage du carbone."),
+    ("Préserver l’eau :", "utiliser l’irrigation au goutte-à-goutte pour accompagner la production tout en maîtrisant l’utilisation de l’eau."),
+    ("Mobiliser des énergies renouvelables :", "intégrer l’énergie solaire et le biogaz dans la politique agricole du domaine."),
+    ("Raisonner la protection des cultures :", "privilégier une utilisation raisonnée des pesticides et les bonnes pratiques agricoles."),
+    ("Valoriser le rôle des plantations :", "contribuer au stockage du carbone à travers les plantations de manguiers."),
 ]
 VALUES_PAGE = f"""{page_hero("Prendre soin.<br><span class=\"hl\">Faire grandir.</span>", "La qualité des produits, le respect des personnes et la préservation des ressources guident le développement du domaine.", [("champ-aigrettes", "40% 50%"), ("champ-paillage", "center"), ("recolte-caisses", "center 35%")])}
 <section class="wrap page-section">
-  <p class="statement" data-reveal>Produire et valoriser des produits agricoles de qualité, approvisionner les marchés et contribuer au développement économique local, tout en préservant les ressources naturelles.</p>
+  {kicker("Nos missions")}
+  <p class="statement" data-reveal>Produire, valoriser et commercialiser des produits agricoles de qualité, tout en contribuant au développement économique local et à la préservation des ressources naturelles.</p>
+  <div class="value-grid">{''.join(f'<article class="value" data-reveal><h2>{t}</h2><p>{d}</p></article>' for t, d in MISSIONS)}</div>
+</section>
+<section class="wrap page-section" id="valeurs">
+  <div class="section-head"><div>{kicker("Nos valeurs")}<h2 data-words>Ce qui <span class="hl">nous guide.</span></h2></div></div>
   <div class="value-grid">{''.join(f'<article class="value" data-reveal><h2>{t}</h2><p>{d}</p></article>' for t, d in VALUES)}</div>
 </section>
 
@@ -578,7 +603,7 @@ VALUES_PAGE = f"""{page_hero("Prendre soin.<br><span class=\"hl\">Faire grandir.
   <div class="split-copy">
     {kicker("Envers les communautés")}
     <h2 data-words>Grandir <span class="hl">ensemble.</span></h2>
-    <p data-reveal>Le domaine contribue à l’épanouissement socioculturel des communautés de ses zones d’activité. Cet engagement se traduit par des actions concrètes :</p>
+    <p data-reveal>DAN contribue à l’épanouissement socioculturel des communautés dans lesquelles ses activités sont implantées. Cet engagement se traduit par des actions concrètes :</p>
     <ul class="checks">
       <li data-reveal>Participation aux activités de vacances des jeunes.</li>
       <li data-reveal>Dons aux postes de santé.</li>
@@ -588,11 +613,10 @@ VALUES_PAGE = f"""{page_hero("Prendre soin.<br><span class=\"hl\">Faire grandir.
 </section>
 
 <section class="wrap chapter" id="certifications">
-  <div class="section-head"><div>{kicker("Qualité &amp; reconnaissance")}<h2 data-words>Des exigences <span class="hl">suivies.</span></h2></div>
+  <div class="section-head"><div>{kicker("Nos atouts")}<h2 data-words>Des exigences <span class="hl">suivies.</span></h2></div>
     <div data-reveal>
       <ul class="badges" aria-label="Référentiels cités"><li>GLOBALG.A.P.</li><li>Tesco Nurture</li><li>GRASP</li><li>SMETA</li></ul>
-      <p>La présentation du domaine cite GLOBALG.A.P., Tesco Nurture et GRASP, ainsi que les audits sociaux SMETA, dans le cadre de ses démarches de qualité et de responsabilité sociale.</p>
-      <p>La qualité, la traçabilité et la sécurité alimentaire s’inscrivent dans une démarche suivie tout au long du parcours des produits.</p>
+      <ul class="checks">{''.join(f'<li><strong>{t}</strong> {d}</li>' for t, d in ASSETS)}</ul>
     </div>
   </div>
 </section>"""
@@ -604,10 +628,10 @@ page("valeurs.html", "Nos engagements — Domaine Agricole de Néma",
 # ---------------------------------------------------------------------------- équipes
 ORG = [
     ("direction", "Direction", "La direction pilote l’activité et son développement.", ["Président du conseil d’administration (PCA)", "Directrice générale (DG)", "Directeur général adjoint (DGA)"]),
-    ("production", "Production &amp; suivi technique", "Des fonctions dédiées à la conduite des productions et au suivi des cultures.", ["Direction de la production", "Chefs de périmètres", "Chefs de culture", "Responsable phytosanitaire"]),
+    ("production", "Production &amp; suivi technique", "Des fonctions dédiées à la conduite des productions et au suivi des cultures.", ["Chef de production", "Chefs de périmètre", "Chefs de culture", "Responsable phytosanitaire"]),
+    ("qualite", "Administration &amp; qualité", "Des fonctions support contribuent à la gestion et au suivi des pratiques du domaine.", ["Responsable administratif et financier (RAF)", "Responsable qualité, hygiène, sécurité et environnement (RQHSE)"]),
     ("transformation", "Transformation", "Une équipe dédiée à la valorisation des récoltes et aux produits dérivés de la mangue.", ["Responsable de la transformation"]),
     ("activites", "Activités spécialisées", "Des responsables encadrent les activités complémentaires du domaine.", ["Responsable de l’apiculture", "Responsable de la pisciculture", "Responsable de la production animale"]),
-    ("qualite", "Administration &amp; qualité", "Des fonctions support contribuent à la gestion et au suivi des pratiques du domaine.", ["Responsable administratif et financier (RAF)", "Responsable qualité, hygiène, sécurité et environnement (RQHSE)"]),
 ]
 ORG_PAGE = f"""{page_hero("Des femmes.<br><span class=\"hl\">Des hommes.</span>", "Une organisation qui relie direction, métiers agricoles, transformation et fonctions support.", [("equipe-terrain", "center 35%"), ("recolte-caisses", "center 35%"), ("conditionnement-chaine", "center 40%")])}
 <section class="wrap split leader">
@@ -615,13 +639,22 @@ ORG_PAGE = f"""{page_hero("Des femmes.<br><span class=\"hl\">Des hommes.</span>"
   <div class="split-copy">
     {kicker("La direction")}
     <h2 data-words>Aminata <span class="hl">Dominique Diouf.</span></h2>
-    <p class="lede" data-reveal>Depuis 2014, Aminata Dominique Diouf assure la direction du Domaine Agricole de Néma. Elle est secondée par Alioune Badara Sylla, ingénieur agronome, à la tête d’une équipe technique et d’ouvriers saisonniers.</p>
+    <p class="lede" data-reveal>Depuis 2014, Mme Aminata Dominique Diouf assure la direction de DAN. Elle est secondée par M. Alioune Badara Sylla, ingénieur agronome, à la tête d’une jeune équipe technique et d’ouvriers saisonniers.</p>
   </div>
 </section>
 
 <section class="wrap page-section">
   <div class="section-head"><div>{kicker("Les fonctions")}<h2 data-words>Une organisation <span class="hl">claire.</span></h2></div></div>
   <div class="org">{''.join(f'<article class="org-unit" id="{i}" data-reveal><h3>{t}</h3><p>{d}</p><ul>{"".join(f"<li>{x}</li>" for x in items)}</ul></article>' for i, t, d, items in ORG)}</div>
+</section>
+
+<section class="wrap chapter" id="partenariats">
+  <div class="section-head"><div>{kicker("Nos partenariats")}<h2 data-words>Partager <span class="hl">le savoir-faire.</span></h2></div></div>
+  <div class="value-grid">
+    <article class="value" data-reveal><h2>Former les futurs professionnels de l’agriculture</h2><p>DAN entretient depuis plusieurs années un partenariat avec l’École nationale supérieure d’agriculture (ENSA). Dans ce cadre, le domaine accueille chaque année au moins quatre élèves ingénieurs en quatrième année de formation, afin de leur permettre de mettre en pratique leurs connaissances au sein d’une exploitation agricole.</p></article>
+    <article class="value" data-reveal><h2>Accueillir les étudiants</h2><p>Le domaine est également sollicité par d’autres établissements d’enseignement supérieur sénégalais, notamment l’UCAD, l’UGB et l’USSEIN, ainsi que par des universités étrangères, pour des collaborations dédiées à la formation pratique de leurs étudiants. Ces stages, d’une durée de deux à six mois, visent à renforcer leurs compétences et à les familiariser avec les réalités du métier.</p></article>
+    <article class="value" data-reveal><h2>Participer aux réseaux de développement durable</h2><p>DAN est par ailleurs membre de plusieurs réseaux et plateformes engagés en faveur du développement durable, dont le COLEAD (Comité de liaison Entrepreneuriat-Agriculture-Développement). Cette participation s’inscrit dans sa volonté de promouvoir une agriculture responsable et le partage des savoir-faire.</p></article>
+  </div>
 </section>
 
 {band("recolte-sacs", "Le partage d’expérience accompagne la vie des équipes.")}"""
