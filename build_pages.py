@@ -36,6 +36,7 @@ CATALOG = {
     "conditionnement-tri": ("Contrôle des mangues sur la ligne de tri", "conditionnement"),
     "mangues-cartons": ("Mangues Kent conditionnées en cartons", "conditionnement"),
     "chargement-camion": ("Chargement d’un camion au départ du domaine", "conditionnement"),
+    "chargement-conteneur": ("Chargement d’un conteneur au domaine", "conditionnement"),
     "elevage-vache": ("Une vache et son veau au domaine", "elevage"),
     "conditionnement-equipe": ("L’équipe réunie à la station de conditionnement", "equipes"),
     "equipe-partenaire": ("Aminata Dominique Diouf, directrice du domaine, avec un partenaire", "equipes"),
@@ -183,7 +184,7 @@ def page(filename, title, description, body, preload=None, home=False):
       <h2 data-words>Parlons de vos <span class="hl">projets agricoles.</span></h2>
       <div class="footer-contact" data-reveal>
         <a class="footer-cta" href="mailto:contact@dan.sn" data-magnet>Écrire au domaine <span aria-hidden="true">↗</span></a>
-        <a href="tel:+221338898712">+221 33 889 87 12</a>
+        <a href="tel:+221338653076">+221 33 865 30 76</a>
         <a href="mailto:contact@dan.sn">contact@dan.sn</a>
         <span>Almadies, route du King Fahd Palace, immeuble A2 · Sénégal</span>
       </div>
@@ -296,7 +297,7 @@ PATH_STEPS = [
     ("Au champ", "Les parcelles sont plantées et irriguées au goutte-à-goutte, pour maîtriser l’utilisation de l’eau.", "plantation"),
     ("La récolte", "Mangues, oignons, maïs : les équipes du domaine, renforcées par les saisonniers, récoltent à maturité.", "recolte-mais"),
     ("Au conditionnement", "Dans les stations du domaine, les fruits sont contrôlés, triés et mis en cartons.", "conditionnement-chaine"),
-    ("Le départ", "Les récoltes prennent la route vers les marchés du Sénégal, d’Europe et d’Afrique.", "chargement-camion"),
+    ("Le départ", "Les récoltes prennent la route vers les marchés du Sénégal, d’Europe et d’Afrique.", "chargement-conteneur"),
 ]
 
 
